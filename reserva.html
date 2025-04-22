@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reserva | Complejo Las Sierras</title>
+  <link rel="stylesheet" href="style-reserva.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <form id="reservaForm">
+      <div class="step active">
+        <h2>Paso 1: Fechas</h2>
+        <label>Fecha de ingreso:<input type="date" name="fecha_ingreso" required></label>
+        <label>Fecha de egreso:<input type="date" name="fecha_egreso" required></label>
+        <button type="button" class="next">Siguiente</button>
+      </div>
+
+      <div class="step">
+        <h2>Paso 2: Tus datos</h2>
+      
+        <label>Nombre y apellido:
+          <input type="text" name="nombre_apellido" required>
+        </label>
+      
+        <label>Provincia:
+          <input type="text" name="provincia" required>
+        </label>
+      
+        <p>Para recibir la respuesta por WhatsApp, completá con tu número de teléfono y característica.</p>
+        <div style="display: flex; gap: 1rem;">
+          <label style="flex: 1;">Cod. Área:
+            <input type="text" name="telefono_codigo">
+          </label>
+          <label style="flex: 2;">Teléfono:
+            <input type="text" name="telefono_numero">
+          </label>
+        </div>
+      
+        <p>O para recibir la respuesta por Mail, completá con tu mail.</p>
+        <label>Email:
+          <input type="email" name="mail">
+        </label>
+      
+        <label>Unidad solicitada:
+          <select name="unidad" required>
+            <option value="" disabled selected>Seleccionar</option>
+            <option value="Cabaña">Cabaña</option>
+            <option value="Bungalow">Bungalow</option>
+            <option value="Camping">Camping</option>
+          </select>
+        </label>
+      
+        <label>Cantidad de huéspedes:
+          <input type="number" name="huespedes" min="1" required>
+        </label>
+      
+        <label>Comentarios adicionales:
+          <textarea name="comentarios"></textarea>
+        </label>
+      
+        <div class="button-group">
+          <button type="button" class="prev">Volver</button>
+          <button type="submit">Enviar</button>
+        </div>
+      </div>
+      
+    </form>
+    <div class="confirmation hidden">
+      <h2>Gracias, tu solicitud fue enviada.</h2>
+      <p>En breves nuestro equipo se estará contactando con usted para continuar con la misma.</p>
+    </div>
+  </div>
+
+  <script src="form-sheet.js"></script>
+</body>
+</html>
