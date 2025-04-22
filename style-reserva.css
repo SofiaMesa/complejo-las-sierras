@@ -1,0 +1,121 @@
+/*======================================
+  RESET Y BASE
+======================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --verde-oscuro: #43654A;
+  --beige-claro: #DFD4B6;
+  --naranja-suave: #D99D55;
+  --marron-suave: #887459;
+  --verde-claro: #7D8A76;
+  --gris-fondo: #f4f4f4;
+}
+
+/*======================================
+  BODY Y CONTENEDOR PRINCIPAL
+======================================*/
+body {
+  font-family: 'Playfair Display', sans-serif;
+  background-color: var(--gris-fondo);
+  padding: 2rem;
+  color: #222;
+}
+
+.form-container {
+  background: white;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/*======================================
+  TIPOGRAFÍA
+======================================*/
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--verde-oscuro);
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--verde-oscuro);
+}
+
+/*======================================
+  CAMPOS DE FORMULARIO
+======================================*/
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-top: 0.3rem;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/*======================================
+  BOTONES
+======================================*/
+button {
+  background-color: var(--naranja-suave);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--verde-oscuro);
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/*======================================
+  MULTISTEP
+======================================*/
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+.confirmation {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hidden {
+  display: none;
+}

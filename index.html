@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<!-- HEAD -->
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inicio | Complejo Las Sierras</title>
+
+<base href="/complejo-las-sierras/">
+
+
+<!-- FORMULARIO EMBEBIDO-->
+<link href="style-reserva.css" rel="stylesheet"/>
+<!-- Fuente decorativa -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Open+Sans&amp;display=swap" rel="stylesheet">
+<!-- Lora -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&amp;display=swap" rel="stylesheet">
+<!-- Estilos -->
+<link href="style.css" rel="stylesheet"/>
+<!-- Script para menú -->
+<script defer="" src="script.js"></script>
+<!-- Script para FORMULARIO -->
+<script src="form-sheet.js"></script>
+<style>
+:root {
+  --verde-oscuro: #3e5f47;
+  --beige-claro: #f4ecd8;
+  --naranja-suave: #e09b50;
+  --marron-suave: #8b6f4e;
+  --verde-claro: #92a188;
+  --gris-suave: #f5f5f5;
+  --blanco: #ffffff;
+  --negro: #1e1e1e;
+}
+
+/* Mejoras visuales */
+body {
+  background-color: var(--gris-suave);
+  color: var(--negro);
+  line-height: 1.6;
+}
+
+.banner {
+  background: linear-gradient(to right, var(--verde-oscuro), var(--verde-claro));
+  color: var(--blanco);
+}
+
+.botones-banner a {
+  font-size: 1.4rem;
+  background-color: var(--naranja-suave);
+  color: var(--blanco);
+  border-radius: 14px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.botones-banner a:hover {
+  background-color: var(--marron-suave);
+}
+
+.titulo-reserva {
+  font-size: 2.6rem;
+  color: var(--verde-oscuro);
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+
+</style></link></link></head>
+<body>
+<!-- Header -->
+<header>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+<!-- Menú lateral con logo -->
+<div class="sidebar" id="sidebar" onmouseleave="closeMenu()">
+<div class="logo-sidebar">
+<img alt="Logo Complejo Las Sierras" src="img/logo-las-sierras.png"/>
+</div>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="cabanas.html">Cabañas</a></li>
+<li><a href="bungalows.html">Bungalows</a></li>
+<li><a href="acampe.html">Acampe</a></li>
+<li><a href="reserva.html">Reservar</a></li>
+</ul>
+</div>
+<!-- Banner -->
+<section class="banner">
+<h1>Complejo Las Sierras</h1>
+<p>Tu escape natural en el corazón de Nono</p>
+<div class="botones-banner">
+<a href="cabanas.html">Cabañas</a>
+<a href="acampe.html">Camping</a>
+<a href="promociones.html">Promociones</a>
+<a class="btn-banner" href="reserva.html">Reservar ahora</a>
+</div>
+</section>
+<!-- Contenido principal -->
+<main>
+<!-- Bienvenida -->
+<section class="bienvenida">
+<h2>Conocé nuestro Complejo en Nono</h2>
+<p>¡Hola! Estamos emocionados de que estés aquí, explorando todo lo que nuestro complejo tiene para ofrecer.</p>
+<p>En el Complejo Las Sierras, sabemos que unas vacaciones en plena naturaleza son una de las experiencias más enriquecedoras que puedes disfrutar.</p>
+<p><strong>Ubicación Privilegiada:</strong> Estamos estratégicamente ubicados...</p>
+<div class="destacado">
+<p>Abiertos a partir de Diciembre 2025.</p>
+</div>
+</section>
+<!-- Galería -->
+<section class="galeria">
+<img alt="Río Nono" src="img/rio-nono.jpeg"/>
+<img alt="Cabaña exterior" src="img/cabania-exterior.jpeg"/>
+<img alt="Dormitorio doble" src="img/dormitorio-doble.jpeg"/>
+<img alt="Habitación cuchetas" src="img/habitacion-cuchetas.jpeg"/>
+<img alt="Pileta y parque" src="img/pileta.jpeg"/>
+<img alt="Parque arbolado" src="img/parque-arbolado.jpeg"/>
+</section>
+<!-- Mapa -->
+<section class="mapa">
+<h3>¿Dónde estamos?</h3>
+<iframe allowfullscreen="" height="350" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.6303673882415!2d-65.0075354848899!3d-31.80279637969114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d293195c26865%3A0x6fde6c81ce868359!2sComplejo%20Las%20Sierras!5e0!3m2!1ses-419!2sar!4v1713720749325!5m2!1ses-419!2sar" style="border:0;" width="100%"></iframe>
+</section>
+</main>
+<!-- Titulo forlmulario de reserva -->
+<section class="reserva-home">
+<h2 class="titulo-reserva">Hacé tu reserva</h2>
+<div class="form-container">
+  <form id="reservaForm">
+    <div class="step active">
+      <h2>Paso 1: Fechas</h2>
+      <label>Fecha de ingreso:<input name="fecha_ingreso" required type="date"/></label>
+      <label>Fecha de egreso:<input name="fecha_egreso" required type="date"/></label>
+      <button class="next" type="button">Siguiente</button>
+    </div>
+    <div class="step">
+      <h2>Paso 2: Tus datos</h2>
+      <label>Nombre y apellido:<input name="nombre_apellido" required type="text"/></label>
+      <label>Provincia:<input name="provincia" required type="text"/></label>
+      <p>Para recibir la respuesta por WhatsApp, completá con tu número de teléfono y característica.</p>
+      <div style="display: flex; gap: 1rem;">
+        <label style="flex: 1;">Cod. Área:<input name="telefono_codigo" type="text"/></label>
+        <label style="flex: 2;">Teléfono:<input name="telefono_numero" type="text"/></label>
+      </div>
+      <p>O para recibir la respuesta por Mail, completá con tu mail.</p>
+      <label>Email:<input name="mail" type="email"/></label>
+      <label>Unidad solicitada:
+        <select name="unidad" required>
+          <option disabled selected value="">Seleccionar</option>
+          <option value="Cabaña">Cabaña</option>
+          <option value="Bungalow">Bungalow</option>
+          <option value="Camping">Camping</option>
+        </select>
+      </label>
+      <label>Cantidad de huéspedes:<input min="1" name="huespedes" required type="number"/></label>
+      <label>Comentarios adicionales:<textarea name="comentarios"></textarea></label>
+      <div class="button-group">
+        <button class="prev" type="button">Volver</button>
+        <button type="submit">Enviar</button>
+      </div>
+    </div>
+  </form>
+  <div class="confirmation hidden">
+    <h2>Gracias, tu solicitud fue enviada.</h2>
+    <p>En breves nuestro equipo se estará contactando con usted para continuar con la misma.</p>
+  </div>
+</div>
+
+<!-- Pegá acá todo lo que está dentro de <form> en reserva.html -->
+
+</section>
+<!-- Reseñas -->
+<section class="reseñas">
+<h3>Lo que dicen nuestros visitantes</h3>
+<div class="slider">
+<div class="slide active">
+<p>“Hermoso lugar. Muy limpio y rodeado de naturaleza. Ideal para desconectar.”</p>
+<span class="autor">— María González ⭐⭐⭐⭐⭐</span>
+</div>
+<div class="slide">
+<p>“La atención fue excelente. Volveremos sin dudarlo. ¡Muy recomendable!”</p>
+<span class="autor">— Carlos Funes ⭐⭐⭐⭐⭐</span>
+</div>
+<div class="slide">
+<p>“Nos encantó la pileta y el parque. Los chicos se divirtieron un montón.”</p>
+<span class="autor">— Laura D. ⭐⭐⭐⭐✰</span>
+</div>
+<div class="slide">
+<p>“Estuvimos una semana y fue perfecta. Lugar tranquilo, cómodo y familiar.”</p>
+<span class="autor">— Javier y Milagros ⭐⭐⭐⭐⭐</span>
+</div>
+<div class="slide">
+<p>“Excelente ubicación cerca del río. Volveremos en verano.”</p>
+<span class="autor">— Camila T. ⭐⭐⭐⭐✰</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="redes">
+<a aria-label="Instagram" href="https://www.instagram.com/complejolassierras/" target="_blank">
+<img alt="Instagram" src="https://icongr.am/feather/instagram.svg?size=28&amp;color=ffffff"/>
+</a>
+<a aria-label="Facebook" href="https://www.facebook.com/complejolassierras/" target="_blank">
+<img alt="Facebook" src="https://icongr.am/feather/facebook.svg?size=28&amp;color=ffffff"/>
+</a>
+<a aria-label="Ubicación" href="https://www.google.com.ar/maps/place/Complejo+Las+Sierras/" target="_blank">
+<img alt="Ubicación" src="https://icongr.am/feather/map-pin.svg?size=28&amp;color=ffffff"/>
+</a>
+<a aria-label="WhatsApp" href="https://api.whatsapp.com/send/?phone=541160248224&amp;text=Consulta+desde+la+web" target="_blank">
+<img alt="WhatsApp" src="https://icongr.am/feather/message-circle.svg?size=28&amp;color=ffffff"/>
+</a>
+<a aria-label="Email" href="mailto:lassierrascamping@gmail.com">
+<img alt="Mail" src="https://icongr.am/feather/mail.svg?size=28&amp;color=ffffff"/>
+</a>
+</div>
+<p>© 2025 Complejo Las Sierras</p>
+</footer>
+<!-- Botón flotante de WhatsApp -->
+<a aria-label="Escribinos por WhatsApp" class="whatsapp" href="https://api.whatsapp.com/send/?phone=541160248224&amp;text=Hola,+quisiera+hacer+una+consulta+sobre+el+Complejo+Las+Sierras" target="_blank">
+<img alt="WhatsApp" src="https://icongr.am/fontawesome/whatsapp.svg?size=32&amp;color=ffffff"/>
+</a>
+</body>
+</html>
