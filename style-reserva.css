@@ -1,68 +1,62 @@
-/* RESET Y BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Playfair Display', sans-serif;
   background-color: #f4f4f4;
-  padding: 2rem;
-  color: #1e1e1e;
-  line-height: 1.6;
-  font-size: 1rem;
+  padding: 1.7rem;
 }
 
 .form-container {
   background: white;
-  max-width: 900px;
+  max-width: 765.0px;
   margin: auto;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.7rem;
+  border-radius: 8.5px;
+  box-shadow: 0 3.4px 10.2px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #476D54;
+  font-size: 0.85rem; /* ⬅️ más grande */
+  margin-bottom: 1.27rem;
+  color: var(--verde-oscuro);
 }
+
 
 label {
   display: block;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.85rem;
 }
 
 input, select, textarea {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  margin-top: 0.3rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  width: 85.0%;
+  padding: 0.68rem 0.85rem;
+  margin-top: 0.26rem;
+  font-size: 0.85rem; /* 👈 MÁS GRANDE */
+  border: 0.85px solid #ccc;
+  border-radius: 6.8px;
 }
+
 
 button {
   background-color: #D99D55;
   color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
-  margin-top: 1rem;
+  padding: 0.85rem 1.7rem;
+  margin-top: 0.85rem;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-  border-radius: 10px;
-  font-size: 1rem;
+  border-radius: 8.5px;
+  font-size: 0.42rem; /* ⬅️ más grande */
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 
 button:hover {
   background-color: #43654A;
@@ -83,29 +77,10 @@ button:hover {
 
 .confirmation {
   text-align: center;
-  padding: 2rem;
+  padding: 1.7rem;
 }
 
 .hidden {
   display: none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
-  .form-container {
-    padding: 1rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 0.7rem 1.2rem;
-  }
-}
