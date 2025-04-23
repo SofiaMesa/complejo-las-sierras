@@ -1,37 +1,23 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const steps = document.querySelectorAll(".step");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
   const form = document.getElementById("reservaForm");
   const confirmation = document.querySelector(".confirmation");
-  const nextBtns = document.querySelectorAll(".next");
-  const prevBtns = document.querySelectorAll(".prev");
 
   let currentStep = 0;
 
-  function showStep(index) {
-    steps.forEach((step, i) => {
-      step.classList.toggle("active", i === index);
-    });
-  }
-
-  nextBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (currentStep < steps.length - 1) {
-        steps[currentStep].classList.remove("active");
-        currentStep++;
-        showStep(currentStep);
-      }
-    });
+  nextBtn.addEventListener("click", () => {
+    steps[currentStep].classList.remove("active");
+    currentStep++;
+    steps[currentStep].classList.add("active");
   });
 
-  prevBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (currentStep > 0) {
-        steps[currentStep].classList.remove("active");
-        currentStep--;
-        showStep(currentStep);
-      }
-    });
+  prevBtn.addEventListener("click", () => {
+    steps[currentStep].classList.remove("active");
+    currentStep--;
+    steps[currentStep].classList.add("active");
   });
 
   form.addEventListener("submit", (e) => {
@@ -51,6 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
     form.classList.add("hidden");
     confirmation.classList.remove("hidden");
   });
-
-  showStep(currentStep); // Mostrar paso inicial
 });

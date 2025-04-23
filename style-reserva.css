@@ -1,29 +1,13 @@
-/*======================================
-  RESET Y BASE
-======================================*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --verde-oscuro: #43654A;
-  --beige-claro: #DFD4B6;
-  --naranja-suave: #D99D55;
-  --marron-suave: #887459;
-  --verde-claro: #7D8A76;
-  --gris-fondo: #f4f4f4;
-}
-
-/*======================================
-  BODY Y CONTENEDOR PRINCIPAL
-======================================*/
 body {
   font-family: 'Playfair Display', sans-serif;
-  background-color: var(--gris-fondo);
+  background-color: #f4f4f4;
   padding: 2rem;
-  color: #222;
 }
 
 .form-container {
@@ -35,74 +19,54 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/*======================================
-  TIPOGRAFÍA
-======================================*/
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
+  font-size: 2rem; /* ⬅️ más grande */
   margin-bottom: 1.5rem;
   color: var(--verde-oscuro);
 }
 
+
 label {
   display: block;
   margin-bottom: 1rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--verde-oscuro);
+  font-size: 1.7rem;
 }
 
-/*======================================
-  CAMPOS DE FORMULARIO
-======================================*/
-input,
-select,
-textarea {
+input, select, textarea {
   width: 100%;
   padding: 0.8rem 1rem;
   margin-top: 0.3rem;
-  font-size: 1.6rem;
+  font-size: 2rem; /* 👈 MÁS GRANDE */
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-family: 'Open Sans', sans-serif;
 }
 
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
 
-/*======================================
-  BOTONES
-======================================*/
 button {
-  background-color: var(--naranja-suave);
+  background-color: #D99D55;
   color: white;
   border: none;
   padding: 1rem 2rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   border-radius: 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem; /* ⬅️ más grande */
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
+
 button:hover {
-  background-color: var(--verde-oscuro);
+  background-color: #43654A;
 }
 
 .button-group {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
 }
 
-/*======================================
-  MULTISTEP
-======================================*/
 .step {
   display: none;
 }
@@ -119,3 +83,4 @@ button:hover {
 .hidden {
   display: none;
 }
+

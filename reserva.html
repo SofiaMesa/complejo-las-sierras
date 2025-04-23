@@ -3,88 +3,77 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Reservá tu estadía en Complejo Las Sierras. Cabañas, Bungalows y camping en plena naturaleza.">
-  <meta name="keywords" content="Reserva, Cabañas, Bungalows, Camping, Complejo Las Sierras, Nono, Naturaleza, Vacaciones">
-  <title>Reservá tu lugar - Complejo Las Sierras</title>
-  <base href="/complejo-las-sierras/">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reserva | Complejo Las Sierras</title>
+  <link rel="stylesheet" href="style-reserva.css" />
 </head>
 <body>
-  <main class="form-container">
-    <h1>Formulario de Reserva</h1>
-    <form id="reservaForm" novalidate>
-      <!-- Paso 1 -->
+
+  <div class="form-container">
+    <form id="reservaForm">
       <div class="step active">
-        <h2>Datos personales</h2>
-        <label for="nombre">
-          <i class="fas fa-user"></i> Nombre completo
-        </label>
-        <input type="text" id="nombre" name="nombre" required />
-
-        <label for="email">
-          <i class="fas fa-envelope"></i> Email
-        </label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="telefono">
-          <i class="fas fa-phone"></i> Teléfono
-        </label>
-        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{6,15}" title="Ingrese un número válido sin guiones ni espacios" required />
-
-        <button type="button" class="next-btn">Siguiente</button>
+        <h2>Paso 1: Fechas</h2>
+        <label>Fecha de ingreso:<input type="date" name="fecha_ingreso" required></label>
+        <label>Fecha de egreso:<input type="date" name="fecha_egreso" required></label>
+        <button type="button" class="next">Siguiente</button>
       </div>
 
-      <!-- Paso 2 -->
       <div class="step">
-        <h2>Información de la estadía</h2>
-        <label for="ingreso">
-          <i class="fas fa-calendar-alt"></i> Fecha de ingreso
+        <h2>Paso 2: Tus datos</h2>
+      
+        <label>Nombre y apellido:
+          <input type="text" name="nombre_apellido" required>
         </label>
-        <input type="date" id="ingreso" name="ingreso" required />
-
-        <label for="egreso">
-          <i class="fas fa-calendar-alt"></i> Fecha de egreso
+      
+        <label>Provincia:
+          <input type="text" name="provincia" required>
         </label>
-        <input type="date" id="egreso" name="egreso" required />
-
-        <label for="personas">
-          <i class="fas fa-users"></i> Cantidad de personas
+      
+        <p>Para recibir la respuesta por WhatsApp, completá con tu número de teléfono y característica.</p>
+        <div style="display: flex; gap: 1rem;">
+          <label style="flex: 1;">Cod. Área:
+            <input type="text" name="telefono_codigo">
+          </label>
+          <label style="flex: 2;">Teléfono:
+            <input type="text" name="telefono_numero">
+          </label>
+        </div>
+      
+        <p>O para recibir la respuesta por Mail, completá con tu mail.</p>
+        <label>Email:
+          <input type="email" name="mail">
         </label>
-        <input type="number" id="personas" name="personas" min="1" required />
-
-        <button type="button" class="prev-btn">Anterior</button>
-        <button type="button" class="next-btn">Siguiente</button>
+      
+        <label>Unidad solicitada:
+          <select name="unidad" required>
+            <option value="" disabled selected>Seleccionar</option>
+            <option value="Cabaña">Cabaña</option>
+            <option value="Bungalow">Bungalow</option>
+            <option value="Camping">Camping</option>
+          </select>
+        </label>
+      
+        <label>Cantidad de huéspedes:
+          <input type="number" name="huespedes" min="1" required>
+        </label>
+      
+        <label>Comentarios adicionales:
+          <textarea name="comentarios"></textarea>
+        </label>
+      
+        <div class="button-group">
+          <button type="button" class="prev">Volver</button>
+          <button type="submit">Enviar</button>
+        </div>
       </div>
-
-      <!-- Paso 3 -->
-      <div class="step">
-        <h2>Tipo de alojamiento</h2>
-        <label for="alojamiento">
-          <i class="fas fa-home"></i> Seleccioná una opción
-        </label>
-        <select id="alojamiento" name="alojamiento" required>
-          <option value="">-- Seleccionar --</option>
-          <option value="cabaña">Cabaña</option>
-          <option value="bungalow">Bungalow</option>
-          <option value="acampe">Acampe</option>
-        </select>
-
-        <button type="button" class="prev-btn">Anterior</button>
-        <button type="submit">Enviar Reserva</button>
-      </div>
+      
     </form>
-
-    <!-- Confirmación fuera del formulario -->
     <div class="confirmation hidden">
-      <h2>¡Gracias por tu reserva!</h2>
-      <p>Te contactaremos a la brevedad.</p>
+      <h2>Gracias, tu solicitud fue enviada.</h2>
+      <p>En breves nuestro equipo se estará contactando con usted para continuar con la misma.</p>
     </div>
-  </main>
-  <script src="form.js"></script>
+  </div>
+
+  <script src="form-sheet.js"></script>
 </body>
 </html>

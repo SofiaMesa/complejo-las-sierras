@@ -1,7 +1,4 @@
-
-/*======================================
-  ANIMACIONES
-======================================*/
+/* ANIMACIONES */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -22,6 +19,16 @@
     transform: translateY(0);
   }
 }
+
+/* Aplicar sombra solo a títulos importantes */
+.banner h1, .banner p, .reseñas, footer {
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
 
 /*======================================
   PALETA DE COLORES
@@ -45,10 +52,11 @@
   box-sizing: border-box;
 }
 
-/* SOMBRA EN TÍTULOS */
+/* Este es un bloque separado, válido: */
 h1, h2, h3, .banner p, .reseñas, footer {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
+
 
 /*======================================
   HEADER
@@ -84,6 +92,7 @@ header {
   width: 220px;
   height: 100%;
   background-color: rgba(125, 138, 118, 0.95);
+  backdrop-filter: blur(6px);
   border-right: 2px solid rgba(0, 0, 0, 0.1);
   padding: 1rem 1rem 2rem;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
@@ -137,11 +146,6 @@ header {
   text-align: center;
   padding: 4rem 2rem;
   position: relative;
-  min-height: 60vh; /* ⬅️ esta línea es clave */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .banner h1 {
@@ -163,6 +167,7 @@ header {
   gap: 3rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  
 }
 
 .botones-banner a {
@@ -183,6 +188,11 @@ header {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
+
+
+
+
+
 
 /*======================================
   MAIN
@@ -273,6 +283,7 @@ main {
   background-color: var(--blanco);
   padding: 3rem 1rem;
   text-align: center;
+  
   margin-top: 2rem;
 }
 .reseñas h3 {
@@ -312,6 +323,7 @@ footer {
   background-color: var(--verde-claro);
   color: white;
   text-align: center;
+  
   padding: 1rem;
   font-size: 0.9rem;
   animation: fadeInUp 1s ease both;
@@ -323,10 +335,9 @@ footer .redes {
   margin-bottom: 1rem;
 }
 footer .redes a img {
-  width: 40px;
+  width: 44px;
   height: 40px;
   transition: transform 0.3s ease;
-  filter: brightness(0) invert(1);
 }
 footer .redes a:hover img {
   transform: scale(1.2);
@@ -356,7 +367,24 @@ footer .redes a:hover img {
   height: 60%;
 }
 
-/* SCROLL SUAVE */
+
+
+/* SCROLL SYAVE */
+
 html {
   scroll-behavior: smooth;
+}
+
+
+
+/* Footer redes bien dentro */
+
+footer .redes a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+footer .redes a:hover img {
+  transform: scale(1.2);
 }

@@ -6,10 +6,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Inicio | Complejo Las Sierras</title>
-
-<base href="/complejo-las-sierras/">
-
-
 <!-- FORMULARIO EMBEBIDO-->
 <link href="style-reserva.css" rel="stylesheet"/>
 <!-- Fuente decorativa -->
@@ -131,50 +127,83 @@ body {
 <!-- Titulo forlmulario de reserva -->
 <section class="reserva-home">
 <h2 class="titulo-reserva">Hacé tu reserva</h2>
-<div class="form-container">
-  <form id="reservaForm">
-    <div class="step active">
-      <h2>Paso 1: Fechas</h2>
-      <label>Fecha de ingreso:<input name="fecha_ingreso" required type="date"/></label>
-      <label>Fecha de egreso:<input name="fecha_egreso" required type="date"/></label>
-      <button class="next" type="button">Siguiente</button>
-    </div>
-    <div class="step">
-      <h2>Paso 2: Tus datos</h2>
-      <label>Nombre y apellido:<input name="nombre_apellido" required type="text"/></label>
-      <label>Provincia:<input name="provincia" required type="text"/></label>
-      <p>Para recibir la respuesta por WhatsApp, completá con tu número de teléfono y característica.</p>
-      <div style="display: flex; gap: 1rem;">
-        <label style="flex: 1;">Cod. Área:<input name="telefono_codigo" type="text"/></label>
-        <label style="flex: 2;">Teléfono:<input name="telefono_numero" type="text"/></label>
-      </div>
-      <p>O para recibir la respuesta por Mail, completá con tu mail.</p>
-      <label>Email:<input name="mail" type="email"/></label>
-      <label>Unidad solicitada:
-        <select name="unidad" required>
-          <option disabled selected value="">Seleccionar</option>
-          <option value="Cabaña">Cabaña</option>
-          <option value="Bungalow">Bungalow</option>
-          <option value="Camping">Camping</option>
-        </select>
-      </label>
-      <label>Cantidad de huéspedes:<input min="1" name="huespedes" required type="number"/></label>
-      <label>Comentarios adicionales:<textarea name="comentarios"></textarea></label>
-      <div class="button-group">
-        <button class="prev" type="button">Volver</button>
-        <button type="submit">Enviar</button>
-      </div>
-    </div>
-  </form>
-  <div class="confirmation hidden">
-    <h2>Gracias, tu solicitud fue enviada.</h2>
-    <p>En breves nuestro equipo se estará contactando con usted para continuar con la misma.</p>
-  </div>
-</div>
-
 <!-- Pegá acá todo lo que está dentro de <form> en reserva.html -->
-
+<form id="reservaForm">
+<!-- ... contenido del formulario ... -->
+</form>
+<div class="confirmation hidden">
+<h2>Gracias, tu solicitud fue enviada.</h2>
+<p>En breves nuestro equipo se estará contactando con usted para continuar con la misma.</p>
+</div>
 </section>
+<!-- FORMULARIO EMBEBIDO -->
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reserva | Complejo Las Sierras</title>
+<link href="style-reserva.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="form-container">
+<form id="reservaForm">
+<div class="step active">
+<h2>Paso 1: Fechas</h2>
+<label>Fecha de ingreso:<input name="fecha_ingreso" required="" type="date"/></label>
+<label>Fecha de egreso:<input name="fecha_egreso" required="" type="date"/></label>
+<button class="next" type="button">Siguiente</button>
+</div>
+<div class="step">
+<h2>Paso 2: Tus datos</h2>
+<label>Nombre y apellido:
+            <input name="nombre_apellido" required="" type="text"/>
+</label>
+<label>Provincia:
+            <input name="provincia" required="" type="text"/>
+</label>
+<p>Para recibir la respuesta por WhatsApp, completá con tu número de teléfono y característica.</p>
+<div style="display: flex; gap: 1rem;">
+<label style="flex: 1;">Cod. Área:
+              <input name="telefono_codigo" type="text"/>
+</label>
+<label style="flex: 2;">Teléfono:
+              <input name="telefono_numero" type="text"/>
+</label>
+</div>
+<p>O para recibir la respuesta por Mail, completá con tu mail.</p>
+<label>Email:
+            <input name="mail" type="email"/>
+</label>
+<label>Unidad solicitada:
+            <select name="unidad" required="">
+<option disabled="" selected="" value="">Seleccionar</option>
+<option value="Cabaña">Cabaña</option>
+<option value="Bungalow">Bungalow</option>
+<option value="Camping">Camping</option>
+</select>
+</label>
+<label>Cantidad de huéspedes:
+            <input min="1" name="huespedes" required="" type="number"/>
+</label>
+<label>Comentarios adicionales:
+            <textarea name="comentarios"></textarea>
+</label>
+<div class="button-group">
+<button class="prev" type="button">Volver</button>
+<button type="submit">Enviar</button>
+</div>
+</div>
+</form>
+<div class="confirmation hidden">
+<h2>Gracias, tu solicitud fue enviada.</h2>
+<p>En breves nuestro equipo se estará contactando con usted para continuar con la misma.</p>
+</div>
+</div>
+<script src="form-sheet.js"></script>
+</body>
+</html>
 <!-- Reseñas -->
 <section class="reseñas">
 <h3>Lo que dicen nuestros visitantes</h3>
