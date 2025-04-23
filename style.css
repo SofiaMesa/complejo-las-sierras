@@ -18,10 +18,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  h1, h2, h3, .banner p, .reseñas, footer {
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+h1, h2, h3, .banner p, .reseñas, footer {
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -31,7 +31,6 @@ body {
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
-
 
 /*======================================
   HEADER
@@ -116,14 +115,13 @@ header {
   BANNER
 ======================================*/
 .banner {
-  background: var(--verde-claro) url("img/banner-bosque.jpeg") center center / cover no-repeat;
+  background: var(--verde-claro) url("img/banner-bosque-dark.jpg") center center / cover no-repeat;
   color: white;
   text-align: center;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 4rem 2rem;
   position: relative;
 }
-
 
 .banner h1 {
   font-size: 5rem;
@@ -149,6 +147,7 @@ header {
 }
 
 .botones-banner a {
+  cursor: pointer;
   background-color: var(--beige-claro);
   color: var(--blanco);
   font-family: 'Playfair Display', sans-serif; 
@@ -166,11 +165,6 @@ header {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
-
-
-
-
-
 
 /*======================================
   MAIN
@@ -346,29 +340,11 @@ footer .redes a:hover img {
   height: 60%;
 }
 
-
-
 /* SCROLL SYAVE */
 
 html {
   scroll-behavior: smooth;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ANIMACIONES */
 @keyframes fadeInUp {
@@ -389,5 +365,21 @@ html {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .banner h1 {
+    font-size: 3rem;
+  }
+
+  .botones-banner {
+    gap: 1rem;
+  }
+
+  .botones-banner a {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
   }
 }
