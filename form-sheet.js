@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const steps = document.querySelectorAll(".step");
   const nextBtn = document.querySelector(".next");
