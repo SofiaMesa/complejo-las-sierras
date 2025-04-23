@@ -21,7 +21,7 @@ body {
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem; /* ⬅️ más grande */
+  font-size: 1rem; /* ⬅️ más grande */
   margin-bottom: 1.5rem;
   color: var(--verde-oscuro);
 }
@@ -30,14 +30,14 @@ h2 {
 label {
   display: block;
   margin-bottom: 1rem;
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
 
 input, select, textarea {
   width: 100%;
   padding: 0.8rem 1rem;
   margin-top: 0.3rem;
-  font-size: 2rem; /* 👈 MÁS GRANDE */
+  font-size: 1rem; /* 👈 MÁS GRANDE */
   border: 1px solid #ccc;
   border-radius: 8px;
 }
@@ -52,7 +52,7 @@ button {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   border-radius: 10px;
-  font-size: 1.2rem; /* ⬅️ más grande */
+  font-size: 0.5rem; /* ⬅️ más grande */
   cursor: pointer;
   transition: background 0.3s ease;
 }
