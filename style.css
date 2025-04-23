@@ -1,51 +1,4 @@
 /*======================================
-  RESET GENERAL
-======================================*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Este es un bloque separado, válido: */
-h1, h2, h3, .banner p, .reseñas, footer {
-  text-shadow: 0.85px 1.7px 3.4px rgba(0, 0, 0, 0.25);
-}
-
-
-/* ANIMACIONES */
-@keyframes fadeInUp {
-  0.0% {
-    opacity: 0;
-    transform: translateY(25.5px);
-  }
-  85.0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeInDown {
-  0.0% {
-    opacity: 0;
-    transform: translateY(-25.5px);
-  }
-  85.0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Aplicar sombra solo a títulos importantes */
-.banner h1, .banner p, .reseñas, footer {
-  text-shadow: 0.85px 1.7px 3.4px rgba(0, 0, 0, 0.25);
-}
-
-
-
-
-
-
-/*======================================
   PALETA DE COLORES
 ======================================*/
 :root {
@@ -58,7 +11,26 @@ h1, h2, h3, .banner p, .reseñas, footer {
   --blanco: #FFFFFF;
 }
 
+/*======================================
+  RESET GENERAL
+======================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  h1, h2, h3, .banner p, .reseñas, footer {
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
 
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
 
 
 /*======================================
@@ -69,12 +41,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0.42rem 0.85rem;
-  box-shadow: 0 1.7px 8.5px rgba(24, 22, 22, 0.2);
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 10px rgba(24, 22, 22, 0.2);
 }
 
 .menu-btn {
-  font-size: 0.85rem;
+  font-size: 2.5rem;
   background: none;
   border: none;
   color: white;
@@ -91,14 +63,14 @@ header {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -212.5px;
-  width: 187.0px;
-  height: 85.0%;
+  left: -250px;
+  width: 220px;
+  height: 100%;
   background-color: rgba(125, 138, 118, 0.95);
-  backdrop-filter: blur(5.1px);
-  border-right: 1.7px solid rgba(0, 0, 0, 0.1);
-  padding: 0.85rem 0.85rem 1.7rem;
-  box-shadow: 1.7px 0 8.5px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem 2rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   transition: left 0.3s ease-in-out;
   z-index: 1000;
 }
@@ -114,25 +86,25 @@ header {
   padding: 0;
 }
 .sidebar li {
-  margin: 1.02rem 0;
+  margin: 1.2rem 0;
 }
 .sidebar a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.42rem;
+  font-size: 1.5rem;
   transition: all 0.3s ease;
 }
 .sidebar a:hover {
   color: var(--naranja-suave);
-  transform: translateX(4.25px);
+  transform: translateX(5px);
 }
 .logo-sidebar {
   text-align: center;
-  margin-bottom: 1.7rem;
+  margin-bottom: 2rem;
 }
 .logo-sidebar img {
-  max-width: 127.5px;
+  max-width: 150px;
   height: auto;
   transition: transform 0.4s ease;
 }
@@ -144,31 +116,34 @@ header {
   BANNER
 ======================================*/
 .banner {
+  background: url("img/banner-bosque-dark.jpg") center center / cover no-repeat;
   color: white;
   background: var(--verde-claro) url("img/banner-bosque-dark.jpg") center center / cover no-repeat;
   text-align: center;
-  padding: 3.4rem 1.7rem;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 4rem 2rem;
   position: relative;
 }
 
 .banner h1 {
-  font-size: 4.25rem;
-  letter-spacing: 0.85px;
+  font-size: 5rem;
+  letter-spacing: 1px;
   animation: fadeInDown 1s ease both;
-  margin-bottom: 0.26rem;
+  margin-bottom: 0.3rem;
 }
 
 .banner p {
   color: #ffffffcc;
-  margin-bottom: 0.85rem;
-  font-size: 1.36rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
 }
 
 .botones-banner {
   display: flex;
   justify-content: center;
-  gap: 2.55rem;
-  margin-top: 1.7rem;
+  gap: 3rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
   
 }
@@ -178,18 +153,18 @@ header {
   color: var(--blanco);
   font-family: 'Playfair Display', sans-serif; 
   font-weight: 700;
-  padding: 0.85rem 1.7rem;
-  border-radius: 10.2px;
+  padding: 1rem 2rem;
+  border-radius: 12px;
   text-decoration: none;
-  font-size: 1.36rem;
+  font-size: 1.6rem;
   transition: all 0.3s ease;
-  box-shadow: 0 3.4px 6.8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .botones-banner a:hover {
   background-color: var(--verde-claro);
-  transform: translateY(-2.55px);
-  box-shadow: 0 5.1px 13.6px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -201,41 +176,41 @@ header {
   MAIN
 ======================================*/
 main {
-  padding: 1.7rem;
+  padding: 2rem;
 }
 
 /* BIENVENIDA */
 .bienvenida {
   animation: fadeInUp 1s ease both;
-  margin: 1.27rem 0;
-  font-size: 1.27rem;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
   text-align: justify;
   line-height: 1.6;
 }
 .bienvenida h2 {
   color: var(--marron-suave);
-  font-size: 2.55rem;
-  margin-bottom: 0.85rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 .bienvenida p {
-  margin: 1.27rem 0;
-  font-size: 1.19rem;
+  margin: 1.5rem 0;
+  font-size: 1.4rem;
   line-height: 1.8;
 }
 .bienvenida strong {
   color: var(--verde-oscuro);
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 .destacado {
-  margin-top: 2.55rem;
-  padding-top: 1.7rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
   text-align: center;
-  border-top: 1.7px solid var(--marron-suave);
-  max-width: 595.0px;
-  margin: 2.55rem auto 0 auto;
+  border-top: 2px solid var(--marron-suave);
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
 }
 .destacado p {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--verde-oscuro);
 }
@@ -243,40 +218,40 @@ main {
 /* GALERÍA */
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(212.5px, 1fr));
-  gap: 1.27rem;
-  padding: 1.7rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
   animation: fadeInUp 1s ease both;
 }
 .galeria img {
-  width: 85.0%;
-  border-radius: 6.8px;
+  width: 100%;
+  border-radius: 8px;
   object-fit: cover;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 2.55px 6.8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 .galeria img:hover {
   transform: scale(1.15);
-  box-shadow: 0 5.1px 13.6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 /* MAPA */
 .mapa {
-  padding: 1.7rem 0;
+  padding: 2rem 0;
   animation: fadeInUp 1s ease both;
   animation-delay: 0.2s;
 }
 .mapa h3 {
   color: var(--marron-suave);
   text-align: center;
-  font-size: 2.55rem;
-  margin-bottom: 0.85rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 .mapa iframe {
-  width: 85.0%;
+  width: 100%;
   border: none;
   opacity: 0;
-  transform: translateY(17.0px);
+  transform: translateY(20px);
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.3s;
 }
@@ -284,39 +259,39 @@ main {
 /* RESEÑAS */
 .reseñas {
   background-color: var(--blanco);
-  padding: 2.55rem 0.85rem;
+  padding: 3rem 1rem;
   text-align: center;
-  
-  margin-top: 1.7rem;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
 }
 .reseñas h3 {
-  font-size: 1.7rem;
-  margin-bottom: 1.7rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   color: var(--marron-suave);
 }
 .slider {
   position: relative;
-  max-width: 595.0px;
+  max-width: 700px;
   margin: auto;
-  height: 102.0px;
+  height: 120px;
   overflow: hidden;
 }
 .slide {
   position: absolute;
-  width: 85.0%;
+  width: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   font-style: italic;
-  font-size: 0.94rem;
+  font-size: 1.1rem;
   color: var(--verde-oscuro);
-  padding: 0 1.7rem;
+  padding: 0 2rem;
 }
 .slide.active {
   opacity: 1;
 }
 .autor {
   display: block;
-  margin-top: 0.68rem;
+  margin-top: 0.8rem;
   font-weight: bold;
   color: var(--naranja-suave);
 }
@@ -326,20 +301,20 @@ footer {
   background-color: var(--verde-claro);
   color: white;
   text-align: center;
-  
-  padding: 0.85rem;
-  font-size: 0.77rem;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  font-size: 0.9rem;
   animation: fadeInUp 1s ease both;
 }
 footer .redes {
   display: flex;
   justify-content: center;
-  gap: 0.85rem;
-  margin-bottom: 0.85rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 footer .redes a img {
-  width: 37.4px;
-  height: 34.0px;
+  width: 44px;
+  height: 40px;
   transition: transform 0.3s ease;
 }
 footer .redes a:hover img {
@@ -349,25 +324,25 @@ footer .redes a:hover img {
 /* WHATSAPP */
 .whatsapp {
   position: fixed;
-  bottom: 17.0px;
-  right: 17.0px;
-  width: 5.95rem;
-  height: 5.95rem;
+  bottom: 20px;
+  right: 20px;
+  width: 7rem;
+  height: 7rem;
   background-color: #25D366;
   color: white;
-  font-size: 2.55rem;
+  font-size: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 42.5%;
+  border-radius: 50%;
   text-decoration: none;
-  box-shadow: 0 5.1px 17.0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   z-index: 999;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .whatsapp img {
-  width: 51.0%;
-  height: 51.0%;
+  width: 60%;
+  height: 60%;
 }
 
 
@@ -380,14 +355,38 @@ html {
 
 
 
-/* Footer redes bien dentro */
 
-footer .redes a img {
-  width: 34.0px;
-  height: 34.0px;
-  transition: transform 0.3s ease;
-  filter: brightness(0) invert(1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMACIONES */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-footer .redes a:hover img {
-  transform: scale(1.2);
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

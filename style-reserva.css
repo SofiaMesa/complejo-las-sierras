@@ -4,43 +4,42 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Playfair Display', sans-serif;
   background-color: #f4f4f4;
-  padding: 1.7rem;
+  padding: 2rem;
 }
 
 .form-container {
   background: white;
-  max-width: 765.0px;
+  max-width: 900px;
   margin: auto;
-  padding: 1.7rem;
-  border-radius: 8.5px;
-  box-shadow: 0 3.4px 10.2px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 0.85rem; /* ⬅️ más grande */
-  margin-bottom: 1.27rem;
+  font-size: 2rem; /* ⬅️ más grande */
+  margin-bottom: 1.5rem;
   color: var(--verde-oscuro);
 }
 
 
 label {
   display: block;
-  margin-bottom: 0.85rem;
-  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
 }
 
 input, select, textarea {
-  width: 85.0%;
-  padding: 0.68rem 0.85rem;
-  margin-top: 0.26rem;
-  font-size: 0.85rem; /* 👈 MÁS GRANDE */
-  border: 0.85px solid #ccc;
-  border-radius: 6.8px;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-top: 0.3rem;
+  font-size: 2rem; /* 👈 MÁS GRANDE */
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 
@@ -48,12 +47,12 @@ button {
   background-color: #D99D55;
   color: white;
   border: none;
-  padding: 0.85rem 1.7rem;
-  margin-top: 0.85rem;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-  border-radius: 8.5px;
-  font-size: 0.42rem; /* ⬅️ más grande */
+  border-radius: 10px;
+  font-size: 1.2rem; /* ⬅️ más grande */
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -78,7 +77,7 @@ button:hover {
 
 .confirmation {
   text-align: center;
-  padding: 1.7rem;
+  padding: 2rem;
 }
 
 .hidden {
