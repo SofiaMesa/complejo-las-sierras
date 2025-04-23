@@ -1,13 +1,22 @@
+/* RESET Y BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Playfair Display', sans-serif;
   background-color: #f4f4f4;
   padding: 2rem;
+  color: #1e1e1e;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .form-container {
@@ -21,11 +30,10 @@ body {
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem; /* ⬅️ más grande */
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--verde-oscuro);
+  color: #476D54;
 }
-
 
 label {
   display: block;
@@ -37,11 +45,10 @@ input, select, textarea {
   width: 100%;
   padding: 0.8rem 1rem;
   margin-top: 0.3rem;
-  font-size: 1rem; /* 👈 MÁS GRANDE */
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
-
 
 button {
   background-color: #D99D55;
@@ -52,11 +59,10 @@ button {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   border-radius: 10px;
-  font-size: 0.5rem; /* ⬅️ más grande */
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 
 button:hover {
   background-color: #43654A;
@@ -84,3 +90,22 @@ button:hover {
   display: none;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
