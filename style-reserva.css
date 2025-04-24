@@ -21,6 +21,7 @@ body {
 
 h2 {
   font-family: 'Playfair Display', serif;
+  text-align: center;
   font-size: 2rem; /* ⬅️ más grande */
   margin-bottom: 1.5rem;
   color: var(--verde-oscuro);
