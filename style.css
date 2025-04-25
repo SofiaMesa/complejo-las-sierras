@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, .banner p, .reseñas, footer, {
+h1, h2, h3, .banner p, .reseñas, footer {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -146,28 +146,39 @@ header {
   margin-bottom: 1rem;
   font-size: 1.6rem;
 }
-
+/*======================================
+  BOTONES DEL BANNER
+======================================*/
 .botones-banner {
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  margin-top: 2rem;
   flex-wrap: wrap;
-  
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .botones-banner a {
   cursor: pointer;
   background-color: var(--beige-claro);
   color: var(--blanco);
-  font-family: 'Playfair Display', sans-serif; 
+  font-family: 'Playfair Display', sans-serif;
   font-weight: 700;
-  padding: 1rem 2rem;
-  border-radius: 12px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.botones-banner .btn-banner {
+  background-color: var(--naranja-suave);
+  font-size: 1.6rem;
 }
 
 .botones-banner a:hover {
@@ -175,6 +186,27 @@ header {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
+
+.botones-banner .btn-banner:hover {
+  background-color: var(--verde-oscuro);
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+  .botones-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .botones-banner a {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+}
+
 
 /*======================================
   MAIN
