@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, .banner p, .reseñas, footer {
+h1, h2, h3, .banner p, .reseñas, footer, {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -381,34 +381,5 @@ html {
   .botones-banner a {
     padding: 0.8rem 1.5rem;
     font-size: 1.3rem;
-  }
-}
-
-
-/* Ajustes responsivos específicos */
-@media (max-width: 600px) {
-  .bienvenida {
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .bienvenida h2 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .bienvenida p {
-    font-size: 0.95rem;
-  }
-
-  .whatsapp {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .whatsapp img {
-    width: 65%;
-    height: 65%;
   }
 }
