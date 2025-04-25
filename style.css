@@ -26,10 +26,22 @@ h1, h2, h3, .banner p, .reseñas, footer {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem; /* antes no había un tamaño base */
 }
 
-h1, h2, h3 {
+h1 {
   font-family: 'Playfair Display', serif;
+  font-size: 3.5rem; /* antes 5rem */
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem; /* antes 3rem */
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; /* antes 2rem */
 }
 
 /*======================================
@@ -144,9 +156,9 @@ header {
   color: #ffffffcc;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   margin-bottom: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
-/*======================================
+/*============================= =========
   BOTONES DEL BANNER
 ======================================*/
 .botones-banner {
@@ -166,7 +178,7 @@ header {
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -178,7 +190,7 @@ header {
 
 .botones-banner .btn-banner {
   background-color: var(--naranja-suave);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .botones-banner a:hover {
@@ -219,7 +231,7 @@ main {
 .bienvenida {
   animation: fadeInUp 1s ease both;
   margin: 1.5rem 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: justify;
   line-height: 1.6;
 }
@@ -230,12 +242,12 @@ main {
 }
 .bienvenida p {
   margin: 1.5rem 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.8;
 }
 .bienvenida strong {
   color: var(--verde-oscuro);
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .destacado {
   margin-top: 3rem;
@@ -246,7 +258,7 @@ main {
   margin: 3rem auto 0 auto;
 }
 .destacado p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: var(--verde-oscuro);
 }
@@ -319,7 +331,7 @@ main {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--verde-oscuro);
   padding: 0 2rem;
 }
@@ -340,7 +352,7 @@ footer {
   text-align: center;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   animation: fadeInUp 1s ease both;
 }
 footer .redes {
