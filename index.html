@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="style.css" />
@@ -55,10 +56,10 @@
     <div class="botones-banner">
       <a href="cabanas.html">Cabañas</a>
       <a href="promociones.html">Promociones</a>
-      <a href="reserva.html">Reservar ahora</a>
+      <a class="btn-banner" href="reserva.html">Reservar ahora</a>
       <a href="bungalows.html">Promociones</a>
       <a href="acampe.html">Camping</a>
-      
+
     </div>
   </section>
 
@@ -96,7 +97,7 @@
       <form id="reservaForm">
         <!-- Paso 1 -->
         <div class="step active">
-          <h2>Paso 1: Fechas</h2>
+          <h3>Paso 1: Fechas</h3>
           <label>Fecha de ingreso:<input type="date" name="fecha_ingreso" required /></label>
           <label>Fecha de egreso:<input type="date" name="fecha_egreso" required /></label>
           <button type="button" class="next">Siguiente</button>
@@ -104,7 +105,7 @@
 
         <!-- Paso 2 -->
         <div class="step">
-          <h2>Paso 2: Tus datos</h2>
+          <h3>Paso 2: Tus datos</h3>
           <label>Nombre y apellido:<input type="text" name="nombre_apellido" required /></label>
           <label>Provincia:<input type="text" name="provincia" required /></label>
           <p>Para recibir la respuesta por WhatsApp, completá con tu número de teléfono y característica.</p>
