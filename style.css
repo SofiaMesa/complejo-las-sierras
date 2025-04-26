@@ -32,7 +32,8 @@ body {
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Oswald', sans-serif;
+
     font-size: 3.5rem; /* antes 5rem */
 }
 
@@ -307,6 +308,14 @@ main {
 .galeria img:hover {
   transform: scale(1.20);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
 }
 
 /* MAPA */
