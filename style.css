@@ -471,3 +471,43 @@ html {
     font-size: 1.3rem;
   }
 }
+
+/* BOTONES DEL BANNER (versión móvil) */
+@media (max-width: 600px) {
+  .botones-banner {
+    gap: 1rem;
+  }
+
+  .botones-banner a {
+    width: 90%;
+    max-width: 320px;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* TEXTO DE BIENVENIDA */
+.bienvenida {
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* GALERÍA - AJUSTE EN MÓVILES */
+.galeria {
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 2.5rem;
+  }
+}
+
+/* MAPA - MÁRGENES PARA MÁS RESPIRACIÓN */
+.mapa {
+  padding: 2rem 1rem;
+}
