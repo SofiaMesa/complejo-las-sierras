@@ -289,73 +289,34 @@ main {
   color: var(--verde-oscuro);
 }
 
-
-/*======================================
-  AJUSTE TEXTO PARA MOBILE
-======================================*/
-@media (max-width: 768px) {
-  .bienvenida {
-    text-align: left; /* en móviles alineamos a la izquierda */
-    hyphens: auto; /* divide palabras automáticamente */
-    word-break: break-word; /* rompe palabras largas si hace falta */
-    padding: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.8; /* más separación entre líneas */
-  }
-}
-
-
-
-
-/*======================================
-  GALERÍA CON 4 IMÁGENES Y TÍTULOS
-======================================*/
+/* GALERÍA */
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
   gap: 2rem;
   padding: 2rem;
+  animation: fadeInUp 1s ease both;
+  overflow-x: auto;
 }
-
-.galeria-item {
-  flex: 1 1 calc(25% - 2rem); /* 4 en una fila */
-  text-align: center;
-}
-
-.galeria-item img {
+.galeria img {
   width: 100%;
-  height: 250px;
+  border-radius: 8px;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.galeria img:hover {
+  transform: scale(1.20);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
-.galeria-item img:hover {
-  transform: scale(1.05);
-}
-
-/* Títulos debajo de las imágenes */
-.galeria-item h4 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
-  margin-top: 0.8rem;
-  color: var(--verde-oscuro);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive para móviles */
+/* Versión móvil */
 @media (max-width: 768px) {
-  .galeria-item {
-    flex: 1 1 100%;
-  }
-  .galeria-item img {
-    height: 200px;
+  .galeria {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
 }
-
-
 
 /* MAPA */
 .mapa {
@@ -377,13 +338,6 @@ main {
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.3s;
 }
-
-@media (max-width: 768px) {
-  .mapa h3 {
-    font-size: 2rem; /* antes estaba en 3rem */
-  }
-}
-
 
 /* RESEÑAS */
 .reseñas {
@@ -425,22 +379,6 @@ main {
   color: var(--naranja-suave);
 }
 
-@media (max-width: 768px) {
-  .reseñas h3 {
-    font-size: 1.6rem; /* título "Lo que dicen..." más chico */
-  }
-
-  .slide {
-    font-size: 0.9rem; /* texto de reseñas más chico */
-    padding: 0 1rem; /* menos margen */
-  }
-
-  .autor {
-    font-size: 1rem; /* nombre del autor también más chico */
-  }
-}
-
-
 /* FOOTER */
 footer {
   background-color: var(--verde-claro);
@@ -466,19 +404,6 @@ footer .redes a:hover img {
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
-  footer {
-    font-size: 0.7rem; /* un poco más chico */
-    padding: 0.8rem;
-  }
-
-  footer .redes a img {
-    width: 34px; /* íconos más chicos */
-    height: 30px;
-  }
-}
-
-
 /* WHATSAPP */
 .whatsapp {
   position: fixed;
@@ -502,19 +427,6 @@ footer .redes a:hover img {
   width: 60%;
   height: 60%;
 }
-
-@media (max-width: 768px) {
-  .whatsapp {
-    width: 4.5rem;
-    height: 4.5rem;
-  }
-
-  .whatsapp img {
-    width: 55%;
-    height: 55%;
-  }
-}
-
 
 /* SCROLL SYAVE */
 
