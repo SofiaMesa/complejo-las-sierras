@@ -527,6 +527,8 @@ footer {
   font-size: 0.8rem;
   animation: fadeInUp 1s ease both;
 }
+
+
 footer .redes {
   display: flex;
   justify-content: center;
