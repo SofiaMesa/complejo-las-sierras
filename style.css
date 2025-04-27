@@ -105,31 +105,74 @@ header {
   position: fixed;
   font-family: 'Poppins', sans-serif;
   top: 0;
-  left: -250px;
-  width: 220px;
+  left: -180px; /* angosto */
+  width: 180px;
   height: 100%;
-  background-color: rgba(125, 138, 118, 0.95);
-  backdrop-filter: blur(6px);
+  background: linear-gradient(to bottom, var(--verde-oscuro), var(--verde-claro)); /* degradado */
+  backdrop-filter: blur(8px);
   border-right: 2px solid rgba(0, 0, 0, 0.1);
   padding: 1rem 1rem 2rem;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-  transition: left 0.3s ease-in-out;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4); /* sombra mejorada */
+  transition: left 0.5s ease;
   z-index: 1000;
 }
+
 .sidebar.open {
   left: 0;
 }
-.sidebar a.active {
-  color: var(--naranja-suave);
-  font-weight: bold;
+
+/* Botón Cerrar (X) */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--verde-claro); /* Sin fondo */
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001; /* Que esté sobre el logo */
+  padding: 0; /* Sin padding raro */
+  line-height: 1; /* que no se agrande */
+  width: auto; /* que no tenga cuadrado */
+  height: auto; /* lo mismo */
+  display: none; /* oculto hasta que se abra el menú */
 }
+
+.sidebar.open .close-btn {
+  display: block;
+}
+
+
+/* Fondo Oscuro (Overlay) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+  z-index: 999;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Links del menú */
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
+
 .sidebar li {
   margin: 1.2rem 0;
 }
+
 .sidebar a {
   color: white;
   text-decoration: none;
@@ -137,22 +180,35 @@ header {
   font-size: 1.5rem;
   transition: all 0.3s ease;
 }
+
+.sidebar a.active {
+  color: var(--naranja-suave);
+  font-weight: bold;
+}
+
 .sidebar a:hover {
   color: var(--naranja-suave);
   transform: translateX(5px);
 }
+
+/* Logo dentro del menú */
 .logo-sidebar {
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 5rem 0 2rem 0; /* margen superior grande */
 }
+
+
 .logo-sidebar img {
   max-width: 150px;
   height: auto;
   transition: transform 0.4s ease;
 }
+
 .logo-sidebar img:hover {
   transform: scale(1.05) rotate(-1deg);
 }
+
+
 
 /*======================================
   BANNER
@@ -167,10 +223,12 @@ header {
 }
 
 .banner h1 {
+  color: #F2E9D3;
   font-size: 5rem;
   letter-spacing: 1px;
   animation: fadeInDown 1s ease both;
   margin-bottom: 0.3rem;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* ⬅️ sombrita fuerte pero suave */
 }
 
 .banner p {
@@ -295,14 +353,22 @@ main {
 ======================================*/
 @media (max-width: 768px) {
   .bienvenida {
-    text-align: left; /* en móviles alineamos a la izquierda */
-    hyphens: auto; /* divide palabras automáticamente */
-    word-break: break-word; /* rompe palabras largas si hace falta */
+    text-align: left;
+    hyphens: none;
+    word-break: normal;
     padding: 1.5rem;
     font-size: 1.1rem;
-    line-height: 1.8; /* más separación entre líneas */
+    line-height: 1.5;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .bienvenida strong {
+    display: inline;
+    font-size: 1.2rem;
   }
 }
+
 
 
 
@@ -384,59 +450,69 @@ main {
   }
 }
 
-
-/* RESEÑAS */
 .reseñas {
   background-color: var(--blanco);
-  padding: 3rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   text-align: center;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
+
 .reseñas h3 {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: var(--marron-suave);
 }
+
 .slider {
   position: relative;
+  margin: 0 auto;
   max-width: 700px;
-  margin: auto;
-  height: 120px;
-  overflow: hidden;
+  height: auto; /* Ojo: no usamos min-height */
+  overflow: visible;
 }
+
 .slide {
-  position: absolute;
+  position: absolute; /* mantenemos absolute para superposición correcta */
   width: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   font-style: italic;
   font-size: 1rem;
   color: var(--verde-oscuro);
-  padding: 0 2rem;
+  text-align: center;
+  padding: 0 1rem;
 }
+
 .slide.active {
   opacity: 1;
+  position: relative; /* pero el activo pasa a ser relative y ocupa espacio real */
 }
+
 .autor {
   display: block;
-  margin-top: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
   font-weight: bold;
   color: var(--naranja-suave);
 }
 
+.stars {
+  margin-top: 0.2rem;
+  margin-bottom: 0; /* Cero espacio después de estrellas */
+}
+
 @media (max-width: 768px) {
   .reseñas h3 {
-    font-size: 1.6rem; /* título "Lo que dicen..." más chico */
+    font-size: 1.6rem;
   }
 
   .slide {
-    font-size: 0.9rem; /* texto de reseñas más chico */
-    padding: 0 1rem; /* menos margen */
+    font-size: 0.9rem;
   }
 
   .autor {
-    font-size: 1rem; /* nombre del autor también más chico */
+    font-size: 1rem;
   }
 }
 
@@ -579,7 +655,7 @@ html {
   padding: 1rem;
   font-size: 1.2rem;
   line-height: 1.6;
-  text-align: justify;
+  text-align: center;
 }
 
 /* GALERÍA - AJUSTE EN MÓVILES */

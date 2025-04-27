@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo-las-sierras.png" type="image/png">
+
   <!-- Estilos -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="style-reserva.css" />
@@ -35,19 +38,23 @@
   </header>
   
 
-  <!-- Menú lateral -->
-  <div class="sidebar" id="sidebar" onmouseleave="closeMenu()">
-    <div class="logo-sidebar">
-      <img src="img/logo-las-sierras.png" alt="Logo Complejo Las Sierras" />
-    </div>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="cabanas.html">Cabañas</a></li>
-      <li><a href="bungalows.html">Bungalows</a></li>
-      <li><a href="acampe.html">Acampe</a></li>
-      <li><a href="reserva.html">Reservar</a></li>
-    </ul>
+  <!-- Overlay -->
+<div id="overlay" onclick="closeMenu()"></div>
+
+<!-- Menú lateral -->
+<div class="sidebar" id="sidebar">
+  <button class="close-btn" onclick="closeMenu()">×</button>
+  <div class="logo-sidebar">
+    <img src="img/logo-las-sierras.png" alt="Logo Complejo Las Sierras" />
   </div>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="cabanas.html">Cabañas</a></li>
+    <li><a href="bungalows.html">Bungalows</a></li>
+    <li><a href="acampe.html">Acampe</a></li>
+    <li><a href="reserva.html">Reservar</a></li>
+  </ul>
+</div>
 
   <!-- Banner -->
   <section class="banner">
@@ -65,15 +72,19 @@
 
   <!-- Contenido principal -->
   <main>
-    <section class="bienvenida">
+    <section class="bienvenida"> 
       <h2>Conocé nuestro Complejo en Nono</h2>
+    
       <p>¡Hola! Estamos emocionados de que estés aquí, explorando todo lo que nuestro complejo tiene para ofrecer.</p>
+    
       <p>En el Complejo Las Sierras, sabemos que unas vacaciones en plena naturaleza son una de las experiencias más enriquecedoras que puedes disfrutar.</p>
-      <p><strong>Ubicación Privilegiada:</strong> Estamos estratégicamente ubicados...</p>
-      <div class="destacado">
-        <p>Abiertos a partir de Diciembre 2025.</p>
-      </div>
+    
+      <p><strong>Ubicación Privilegiada:</strong> Estamos estratégicamente ubicados en un entorno natural único, cercano a los principales atractivos turísticos.</p>
+    
+      <p><strong>¡Abiertos a partir de Diciembre 2025!</strong></p>
     </section>
+    
+    
 
     <!-- Galería -->
     <section class="galeria">
