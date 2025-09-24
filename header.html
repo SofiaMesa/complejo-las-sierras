@@ -1,16 +1,31 @@
 <!-- header.html -->
 <header>
-  <h1 class="visually-hidden">Complejo Las Sierras</h1>
-  <nav aria-label="Principal">
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="cabanas.html">Cabañas</a></li>
-      <li><a href="bungalows.html">Bungalows</a></li>
-      <li><a href="acampe.html">Acampe</a></li>
-      <li><a href="amenities.html">Amenities</a></li>
-      <li><a href="promociones.html">Promociones</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="reserva.html">Reserva</a></li>
-    </ul>
-  </nav>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <div class="logo-header">
+    <a href="index.html">
+      <img src="img/logo-las-sierras.png" alt="Logo Complejo Las Sierras">
+    </a>
+  </div>
 </header>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+<!-- Menú lateral -->
+<div class="sidebar" id="sidebar">
+  <button class="close-btn" onclick="closeMenu()">×</button>
+  <div class="logo-sidebar">
+    <img src="img/logo-las-sierras.png" alt="Logo Complejo Las Sierras">
+  </div>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="cabanas.html">Cabañas</a></li>
+    <li><a href="bungalows.html">Bungalows</a></li>
+    <li><a href="acampe.html">Acampe</a></li>
+    <li><a href="amenities.html">Amenities</a></li>
+    <li><a href="promociones.html">Promociones</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="reserva.html">RESERVAR</a></li>
+  </ul>
+</div>
