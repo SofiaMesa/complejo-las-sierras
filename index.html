@@ -1,217 +1,187 @@
-<!DOCTYPE html >
-<html lang="es-ES">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inicio | Complejo Las Sierras</title>
+  <meta name="description" content="Cabañas, bungalows y acampe en Nono. Piscina, bajada al río y naturaleza. Reservá fácil.">
+  <link rel="canonical" href="https://complejolassierras.com/">
+  <meta name="theme-color" content="#476D54">
 
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Fuentes: un solo request, con swap -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" href="img/logo-las-sierras.png" type="image/png">
+  <!-- Social -->
+  <meta property="og:title" content="Complejo Las Sierras">
+  <meta property="og:description" content="Cabañas, bungalows y acampe en Nono. Naturaleza y confort.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://complejolassierras.com/">
+  <meta property="og:image" content="https://complejolassierras.com/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-reserva.css" />
-
-  <!-- Scripts -->
-  <script src="script.js" defer></script>
-  <script src="form-sheet.js" defer></script>
-
-  <!-- Estilos internos -->
-  
+  <!-- CSS -->
+  <link rel="icon" href="/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    <div class="logo-header">
-      <a href="index.html">
-        <img src="img/logo-las-sierras.png" alt="Logo Complejo Las Sierras" />
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header__bar">
+      <a class="site-logo" href="/">
+        <img src="/img/logo-las-sierras.png" alt="Complejo Las Sierras" width="160" height="48">
       </a>
+      <nav class="site-nav" aria-label="Principal">
+        <ul class="site-menu">
+          <li><a href="/cabanas.html">Cabañas</a></li>
+          <li><a href="/bungalows.html">Bungalows</a></li>
+          <li><a href="/acampe.html">Acampe</a></li>
+          <li><a href="/amenities.html">Amenities</a></li>
+          <li><a href="/promociones.html">Promociones</a></li>
+          <li><a class="btn btn--primary" href="/reserva.html">Reservar</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  
 
-  <!-- Overlay -->
-<div id="overlay" onclick="closeMenu()"></div>
-
-<!-- Menú lateral -->
-<div class="sidebar" id="sidebar">
-  <button class="close-btn" onclick="closeMenu()">×</button>
-  <div class="logo-sidebar">
-    <img src="img/logo-las-sierras.png" alt="Logo Complejo Las Sierras" />
-  </div>
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="cabanas.html">Cabañas</a></li>
-    <li><a href="bungalows.html">Bungalows</a></li>
-    <li><a href="acampe.html">Acampe</a></li>
-    <li><a href="reserva.html">RESERVAR</a></li>
-  </ul>
-</div>
-
-  <!-- Banner -->
-  <section class="banner">
-    <h1>Complejo Las Sierras</h1>
-    <p>Tu escape natural en el corazón de Nono</p>
-    <div class="botones-banner">
-      <a href="cabanas.html">Cabañas</a>
-      <a href="promociones.html">Promociones</a>
-      <a class="btn-banner" href="reserva.html">RESERVAR AHORA</a>
-      <a href="bungalows.html">Bungalows</a>
-      <a href="acampe.html">Camping</a>
-
-    </div>
-  </section>
-
-  <!-- Contenido principal -->
-  <main>
-    <section class="bienvenida"> 
-      <h2>Conocé nuestro Complejo en Nono</h2>
-    
-      <p>¡Hola! Estamos emocionados de que estés aquí, explorando todo lo que nuestro complejo tiene para ofrecer.</p>
-    
-      <p>En el Complejo Las Sierras, sabemos que unas vacaciones en plena naturaleza son una de las experiencias más enriquecedoras que puedes disfrutar.</p>
-    
-      <p><strong>Ubicación Privilegiada:</strong> Estamos estratégicamente ubicados en un entorno natural único, cercano a los principales atractivos turísticos.</p>
-    
-      <p><strong>¡Abiertos a partir de Diciembre 2025!</strong></p>
-    </section>
-    
-    
-
-    <!-- Galería -->
-    <section class="galeria">
-      <div class="galeria-item">
-        <img src="img/cabania-exterior.jpeg" alt="Cabaña exterior" />
-        <h4>Cabañas Equipadas</h4>
-      </div>
-      <div class="galeria-item">
-        <img src="img/pileta.jpeg" alt="Pileta" />
-        <h4>Amplia Pileta</h4>
-      </div>
-      <div class="galeria-item">
-        <img src="img/rio-nono.jpeg" alt="Río Nono" />
-        <h4>Río Privado</h4>
-      </div>
-      <div class="galeria-item">
-        <img src="img/parque-arbolado.jpeg" alt="Parque Arbolado" />
-        <h4>Parque Natural</h4>
-      </div>
-    </section>
-
-    <!-- Mapa -->
-    <section class="mapa">
-      <h3>¿Dónde estamos?</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.6303673882415!2d-65.0075354848899!3d-31.80279637969114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d293195c26865%3A0x6fde6c81ce868359!2sComplejo%20Las%20Sierras!5e0!3m2!1ses-419!2sar!4v1713720749325!5m2!1ses-419!2sar" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <!-- Formulario de reserva -->
-    <section class="reserva-home">
-      <h2 class="titulo-reserva">Hacé tu reserva</h2>
-      <form id="reservaForm">
-        <!-- Paso 1 -->
-        <div class="step active">
-          <h3>Paso 1: Fechas</h3>
-          <label>Fecha de ingreso:<input type="date" name="fecha_ingreso" required /></label>
-          <label>Fecha de egreso:<input type="date" name="fecha_egreso" required /></label>
-          <button type="button" class="next">Siguiente</button>
-        </div>
-
-        <!-- Paso 2 -->
-        <div class="step">
-          <h3>Paso 2: Tus datos</h3>
-          <label>Nombre y apellido:<input type="text" name="nombre_apellido" required /></label>
-          <label>Provincia:<input type="text" name="provincia" required /></label>
-          <p>Para recibir la respuesta por WhatsApp, completá con tu número de teléfono y característica.</p>
-          <div style="display: flex; gap: 1rem;">
-            <label style="flex: 1;">Cod. Área:<input type="text" name="telefono_codigo" /></label>
-            <label style="flex: 2;">Teléfono:<input type="text" name="telefono_numero" /></label>
-          </div>
-          <p>O para recibir la respuesta por Mail, completá con tu mail.</p>
-          <label>Email:<input type="email" name="mail" /></label>
-          <label>Unidad solicitada:
-            <select name="unidad" required>
-              <option disabled selected value="">Seleccionar</option>
-              <option value="Cabaña">Cabaña</option>
-              <option value="Bungalow">Bungalow</option>
-              <option value="Camping">Camping</option>
-            </select>
-          </label>
-          <label>Cantidad de huéspedes:<input type="number" name="huespedes" min="1" required /></label>
-          <label>Comentarios adicionales:<textarea name="comentarios"></textarea></label>
-          <div class="button-group">
-            <button type="button" class="prev">Volver</button>
-            <button type="submit">Enviar</button>
+  <main id="main" role="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1>Tu descanso en Nono</h1>
+          <p>Cabañas equipadas, bungalows prácticos y zona de acampe con parcelas amplias. Bajada al río, piscina y naturaleza real.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/reserva.html">Consultar disponibilidad</a>
+            <a class="btn btn--ghost" href="#alojamientos">Ver alojamientos</a>
           </div>
         </div>
-      </form>
-
-      <div class="confirmation hidden">
-        <h3>Gracias, tu solicitud fue enviada.</h3>
-        <p>En breves nuestro equipo se estará contactando con usted para continuar con la misma.</p>
+        <picture class="hero__media">
+          <!-- Reemplazá por tus imágenes reales -->
+          <img src="https://github.com/SofiaMesa/complejo-las-sierras/blob/main/img/pileta.jpeg"
+               srcset="https://github.com/SofiaMesa/complejo-las-sierras/blob/main/img/pileta.jpeg 768w, https://github.com/SofiaMesa/complejo-las-sierras/blob/main/img/pileta.jpeg 1280w, https://github.com/SofiaMesa/complejo-las-sierras/blob/main/img/pileta.jpeg 1920w"
+               sizes="(max-width: 768px) 100vw, 50vw"
+               alt="Piscina y parque del complejo"
+               width="1280" height="720" fetchpriority="high">
+        </picture>
       </div>
     </section>
 
-    <!-- Reseñas -->
-    <section class="reseñas">
-      <h3>Lo que dicen nuestros visitantes</h3>
-      <div class="slider">
-        <div class="slide active">
-          <p>“Hermoso lugar. Muy limpio y rodeado de naturaleza. Ideal para desconectar.”</p>
-          <span class="autor">— María González ⭐⭐⭐⭐⭐</span>
+    <!-- Alojamientos -->
+    <section id="alojamientos" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Nuestros alojamientos</h2>
+          <p class="muted">Elegí el que va con tu grupo.</p>
+        </header>
+
+        <div class="grid grid--cards">
+          <article class="card">
+            <img src="/img/cabanas/01.jpg" alt="Cabaña para 4 personas con deck" width="640" height="420" loading="lazy">
+            <div class="card__body">
+              <h3>Cabañas</h3>
+              <p>De 2 a 6 personas. Cocina equipada, A/A, ropa blanca y estacionamiento al lado.</p>
+              <a class="btn btn--secondary" href="/cabanas.html">Ver cabañas</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="/img/bungalows/01.jpg" alt="Bungalow cercano a áreas comunes" width="640" height="420" loading="lazy">
+            <div class="card__body">
+              <h3>Bungalows</h3>
+              <p>Prácticos y cómodos, ideales para parejas o familias que quieren moverse fácil.</p>
+              <a class="btn btn--secondary" href="/bungalows.html">Ver bungalows</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="/img/acampe/01.jpg" alt="Parcela de acampe con quincho e iluminación" width="640" height="420" loading="lazy">
+            <div class="card__body">
+              <h3>Acampe</h3>
+              <p>Parcelas grandes con sombra. Opción de quincho 4×5 m con luz propia.</p>
+              <a class="btn btn--secondary" href="/acampe.html">Ver acampe</a>
+            </div>
+          </article>
         </div>
-        <div class="slide">
-          <p>“La atención fue excelente. Volveremos sin dudarlo. ¡Muy recomendable!”</p>
-          <span class="autor">— Carlos Funes ⭐⭐⭐⭐⭐</span>
+      </div>
+    </section>
+
+    <!-- Amenities teaser -->
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Amenidades destacadas</h2>
+          <p class="muted">Todo lo que necesitás para descansar.</p>
+        </header>
+        <ul class="amenities-grid" aria-label="Listado de amenities">
+          <li><span aria-hidden="true">🏊</span> Piscina</li>
+          <li><span aria-hidden="true">🌳</span> Bajada al río</li>
+          <li><span aria-hidden="true">🔥</span> Asadores</li>
+          <li><span aria-hidden="true">📶</span> Wi-Fi en áreas comunes</li>
+          <li><span aria-hidden="true">🅿️</span> Estacionamiento</li>
+          <li><span aria-hidden="true">👨‍👩‍👧‍👦</span> Espacios para familias</li>
+        </ul>
+        <div class="center">
+          <a class="btn btn--ghost" href="/amenities.html">Ver todos los amenities</a>
         </div>
-        <div class="slide">
-          <p>“Nos encantó la pileta y el parque. Los chicos se divirtieron un montón.”</p>
-          <span class="autor">— Laura D. ⭐⭐⭐⭐✰</span>
+      </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Cómo llegar</h2>
+          <p class="muted">Estamos en Nono, Valle de Traslasierra.</p>
+        </header>
+        <div class="map-embed">
+          <!-- Reemplazá el src por tu mapa real -->
+          <iframe title="Mapa Complejo Las Sierras"
+                  src="https://www.google.com/maps?q=Nono&output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="slide">
-          <p>“Estuvimos una semana y fue perfecta. Lugar tranquilo, cómodo y familiar.”</p>
-          <span class="autor">— Javier y Milagros ⭐⭐⭐⭐⭐</span>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta__grid">
+        <div>
+          <h2>¿Tenés fechas definidas?</h2>
+          <p>Consultá disponibilidad y bloqueá tu estadía ahora mismo.</p>
         </div>
-        <div class="slide">
-          <p>“Excelente ubicación cerca del río. Volveremos en verano.”</p>
-          <span class="autor">— Camila T. ⭐⭐⭐⭐✰</span>
-        </div>
+        <a class="btn btn--primary" href="/reserva.html">Reservar ahora</a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="redes">
-      <a href="https://www.instagram.com/complejolassierras/" target="_blank" aria-label="Instagram">
-        <img src="https://icongr.am/feather/instagram.svg?size=28&color=ffffff" alt="Instagram" />
-      </a>
-      <a href="https://www.facebook.com/complejolassierras/" target="_blank" aria-label="Facebook">
-        <img src="https://icongr.am/feather/facebook.svg?size=28&color=ffffff" alt="Facebook" />
-      </a>
-      <a href="https://www.google.com.ar/maps/place/Complejo+Las+Sierras/" target="_blank" aria-label="Ubicación">
-        <img src="https://icongr.am/feather/map-pin.svg?size=28&color=ffffff" alt="Ubicación" />
-      </a>
-      <a href="https://api.whatsapp.com/send/?phone=541160248224&text=Consulta+desde+la+web" target="_blank" aria-label="WhatsApp">
-        <img src="https://icongr.am/feather/message-circle.svg?size=28&color=ffffff" alt="WhatsApp" />
-      </a>
-      <a href="mailto:lassierrascamping@gmail.com" aria-label="Email">
-        <img src="https://icongr.am/feather/mail.svg?size=28&color=ffffff" alt="Email" />
-      </a>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__grid">
+      <div>
+        <p><strong>Complejo Las Sierras</strong> · Nono, Córdoba</p>
+        <p><a href="mailto:lassierrascamping@gmail.com">lassierrascamping@gmail.com</a></p>
+      </div>
+      <div class="social">
+        <a href="https://wa.me/5493510000000?text=Hola%20quiero%20consultar%20disponibilidad" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="/icons/wa.svg" alt="" width="28" height="28">
+        </a>
+        <a href="mailto:lassierrascamping@gmail.com" aria-label="Email">
+          <img src="/icons/mail.svg" alt="" width="28" height="28">
+        </a>
+      </div>
     </div>
-    <p>© 2025 Complejo Las Sierras</p>
+    <div class="container">
+      <p class="tiny">© 2025 Complejo Las Sierras</p>
+    </div>
   </footer>
 
   <!-- Botón flotante WhatsApp -->
-  <a class="whatsapp" href="https://api.whatsapp.com/send/?phone=541160248224&text=Hola,+quisiera+hacer+una+consulta+sobre+el+Complejo+Las+Sierras" target="_blank" aria-label="Escribinos por WhatsApp">
-    <img src="https://icongr.am/fontawesome/whatsapp.svg?size=32&color=ffffff" alt="WhatsApp" />
+  <a class="whatsapp" href="https://wa.me/5493510000000?text=Hola%20quiero%20consultar%20disponibilidad%20%F0%9F%8F%A0"
+     target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <img src="/icons/wa.svg" alt="" width="32" height="32">
   </a>
+
+  <script src="/script.js" defer></script>
 </body>
 </html>
