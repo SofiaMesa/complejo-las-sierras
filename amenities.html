@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cabañas | Complejo Las Sierras</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amenities | Complejo Las Sierras</title>
+  <meta name="description" content="Piscina, bajada al río, asadores, Wi-Fi en áreas comunes, estacionamiento y más.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Cabañas</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="cabanas.html" class="active">Cabañas</a></li>
-        <li><a href="bungalows.html">Bungalows</a></li>
-        <li><a href="acampe.html">Acampe</a></li>
-        <li><a href="amenities.html">Amenities</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div data-include="header.html"></div>
 
-  <main>
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Ruta">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Amenities</li>
+      </ol>
+    </nav>
+
+    <h1>Amenities</h1>
+
     <section>
-      <h2>Nuestras Cabañas</h2>
-      <p>Equipadas con cocina, calefacción, Wi-Fi y hermosas vistas. Disponibles para 2 a 6 personas.</p>
-      <!-- Podés agregar una galería de imágenes más adelante -->
+      <h2>Lo que tenés a mano</h2>
+      <ul class="amenities-grid">
+        <li>🏊 Piscina</li>
+        <li>🌳 Bajada al río</li>
+        <li>🔥 Asadores</li>
+        <li>📶 Wi-Fi en áreas comunes</li>
+        <li>🅿️ Estacionamiento</li>
+        <li>👨‍👩‍👧‍👦 Espacios para familias</li>
+      </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Complejo Las Sierras</p>
-  </footer>
+  <div data-include="footer.html"></div>
+  <script src="script.js" defer></script>
 </body>
 </html>

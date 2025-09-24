@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cabañas | Complejo Las Sierras</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bungalows | Complejo Las Sierras</title>
+  <meta name="description" content="Bungalows prácticos y cómodos, cercanos a áreas comunes. Opciones para parejas y familias.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Cabañas</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="cabanas.html" class="active">Cabañas</a></li>
-        <li><a href="bungalows.html">Bungalows</a></li>
-        <li><a href="acampe.html">Acampe</a></li>
-        <li><a href="amenities.html">Amenities</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div data-include="header.html"></div>
 
-  <main>
-    <section>
-      <h2>Nuestras Cabañas</h2>
-      <p>Equipadas con cocina, calefacción, Wi-Fi y hermosas vistas. Disponibles para 2 a 6 personas.</p>
-      <!-- Podés agregar una galería de imágenes más adelante -->
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Ruta">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Bungalows</li>
+      </ol>
+    </nav>
+
+    <h1>Bungalows</h1>
+    <p>Confort justo para moverse fácil. Cerca de piscina, río y espacios comunes.</p>
+
+    <section class="cards">
+      <article class="card">
+        <img src="img/Exterior 12.jpeg" alt="Bungalow monoambiente" width="640" height="420" loading="lazy">
+        <div class="card__body">
+          <h2 class="h3">Monoambiente</h2>
+          <ul>
+            <li>Kitchenette equipada</li>
+            <li>Para 2/3 personas</li>
+            <li>Climatización</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/Exterior 12.jpeg" alt="Bungalow familiar" width="640" height="420" loading="lazy">
+        <div class="card__body">
+          <h2 class="h3">Familiar</h2>
+          <ul>
+            <li>Ambiente dividido</li>
+            <li>Para 4 huéspedes</li>
+            <li>Patio con mesa</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="cta">
+      <h2>¿Querés uno?</h2>
+      <p><a class="btn btn--primary" href="reserva.html?tipo=bungalow">Consultar disponibilidad</a></p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Complejo Las Sierras</p>
-  </footer>
+  <div data-include="footer.html"></div>
+  <script src="includes.js" defer></script>
 </body>
 </html>

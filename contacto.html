@@ -1,23 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Contacto | Complejo Las Sierras</title>
+  <meta name="description" content="Escribinos por WhatsApp o email. También podés usar el formulario.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div data-include="header.html"></div>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Ruta">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Contacto</li>
+      </ol>
+    </nav>
+
+    <h1>Contacto</h1>
+
+    <section>
+      <h2>Escribinos</h2>
+      <form class="form" action="#" method="POST" novalidate>
+        <label>Nombre
+          <input type="text" name="nombre" required autocomplete="name">
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" rows="5" required></textarea>
+        </label>
+        <button class="btn btn--primary" type="submit">Enviar</button>
+        <input type="text" name="empresa" class="hp" tabindex="-1" aria-hidden="true">
+        <div class="form__feedback" aria-live="polite"></div>
+      </form>
+
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5493510000000" target="_blank" rel="noopener">+54 9 351 XXX XXXX</a></p>
+      <p><strong>Email:</strong> <a href="mailto:lassierrascamping@gmail.com">lassierrascamping@gmail.com</a></p>
+
+      <div class="map-embed" style="margin-top:1rem;">
+        <iframe title="Mapa Complejo Las Sierras" src="https://www.google.com/maps?q=Nono&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer.html"></div>
+  <script src="script.js" defer></script>
 </body>
 </html>
 
 
 
-
-
-<section>
-    <h2>Contacto</h2>
-    <p>Email: lassierrascamping@gmail.com</p>
-    <p>Teléfono: +54 351 123 4567</p>
-    <p><a href="https://www.google.com/maps?q=Complejo+Las+Sierras" target="_blank">Ver ubicación en mapa</a></p>
-  </section>
-  

@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promociones | Complejo Las Sierras</title>
+  <meta name="description" content="Descuentos por estadías, temporadas y pagos anticipados. Condiciones claras y vigencia.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <div data-include="header.html"></div>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Ruta">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Promociones</li>
+      </ol>
+    </nav>
+
+    <h1>Promociones</h1>
+
+    <section class="cards">
+      <article class="card promo">
+        <div class="card__body">
+          <p class="badge">-15%</p>
+          <h2 class="h3">Escapada entre semana</h2>
+          <p>De lunes a jueves. Mínimo 2 noches.</p>
+          <p class="muted">Vigencia: 01/10 al 30/11</p>
+          <p><a class="btn btn--secondary" href="reserva.html?promo=escapada">Aprovechar</a></p>
+        </div>
+      </article>
+      <!-- Podés duplicar esta card para más promos -->
+    </section>
+  </main>
+
+  <div data-include="footer.html"></div>
+  <script src="script.js" defer></script>
 </body>
 </html>

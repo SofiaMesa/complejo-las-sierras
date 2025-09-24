@@ -65,3 +65,44 @@ function showNextSlide() {
 
 // Cambia de reseña cada 5 segundos
 setInterval(showNextSlide, 5000);
+
+/* ====== Includes de header y footer + navegación activa ====== */
+(function () {
+  async function injectIncludes() {
+    const spots = document.querySelectorAll("[data-include]");
+    for (const el of spots) {
+      const file = el.getAttribute("data-include");
+      try {
+        const resp = await fetch(file, { cache: "no-cache" });
+        if (!resp.ok) continue;
+        el.outerHTML = await resp.text();
+      } catch (e) {
+        // si falla, la página igual carga
+      }
+    }
+    highlightActiveLink();
+  }
+
+  function highlightActiveLink() {
+    const path = location.pathname.split("/").pop() || "index.html";
+    const links = document.querySelectorAll('nav[aria-label="Principal"] a');
+    links.forEach(a => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+      if (href === path) {
+        a.classList.add("active");
+        a.setAttribute("aria-current", "page");
+      }
+      if (path === "" && href === "index.html") {
+        a.classList.add("active");
+        a.setAttribute("aria-current", "page");
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", injectIncludes);
+  } else {
+    injectIncludes();
+  }
+})();

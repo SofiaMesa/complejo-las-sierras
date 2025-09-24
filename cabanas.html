@@ -1,36 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cabañas | Complejo Las Sierras</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Cabañas equipadas para 2 a 6 personas con cocina, climatización, ropa blanca y estacionamiento junto a la unidad.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Cabañas</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="cabanas.html" class="active">Cabañas</a></li>
-        <li><a href="bungalows.html">Bungalows</a></li>
-        <li><a href="acampe.html">Acampe</a></li>
-        <li><a href="amenities.html">Amenities</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div data-include="header.html"></div>
 
-  <main>
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Ruta">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Cabañas</li>
+      </ol>
+    </nav>
+
+    <h1>Cabañas</h1>
+    <p>Equipadas con cocina, calefacción/aire, Wi-Fi y vistas al entorno. Opciones para 2 a 6 huéspedes.</p>
+
+    <section class="cards">
+      <article class="card">
+        <img src="img/cabanas/01.jpg" alt="Cabaña 2/3 con galería" width="640" height="420" loading="lazy">
+        <div class="card__body">
+          <h2 class="h3">Cabaña 2/3</h2>
+          <ul>
+            <li>Cama queen + sofá cama</li>
+            <li>Cocina equipada</li>
+            <li>Estacionamiento junto a la unidad</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/cabanas/02.jpg" alt="Cabaña para 4 personas" width="640" height="420" loading="lazy">
+        <div class="card__body">
+          <h2 class="h3">Cabaña 4</h2>
+          <ul>
+            <li>Dos dormitorios</li>
+            <li>A/A en ambiente principal</li>
+            <li>Galería con asador</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="img/cabanas/03.jpg" alt="Cabaña para 6 personas" width="640" height="420" loading="lazy">
+        <div class="card__body">
+          <h2 class="h3">Cabaña 6</h2>
+          <ul>
+            <li>Tres ambientes</li>
+            <li>Dos baños</li>
+            <li>Deck con mesa exterior</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
     <section>
-      <h2>Nuestras Cabañas</h2>
-      <p>Equipadas con cocina, calefacción, Wi-Fi y hermosas vistas. Disponibles para 2 a 6 personas.</p>
-      <!-- Podés agregar una galería de imágenes más adelante -->
+      <h2>Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Incluye ropa de cama?</summary>
+        <div>Sí, con recambio según la estadía.</div>
+      </details>
+      <details>
+        <summary>¿Hay estacionamiento al lado?</summary>
+        <div>Cada unidad tiene espacio asignado junto a la cabaña.</div>
+      </details>
+    </section>
+
+    <section class="cta">
+      <h2>¿Fechas definidas?</h2>
+      <p><a class="btn btn--primary" href="reserva.html?tipo=cabana">Reservar ahora</a></p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Complejo Las Sierras</p>
-  </footer>
+  <div data-include="footer.html"></div>
+  <script src="script.js" defer></script>
+  <script src="includes.js" defer></script>
 </body>
 </html>

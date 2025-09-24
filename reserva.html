@@ -1,81 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reserva | Complejo Las Sierras</title>
-  <link rel="stylesheet" href="style-reserva.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <meta name="description" content="Solicitá tu reserva. Fechas, huéspedes y tipo de unidad. Respuesta por WhatsApp o email.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-reserva.css">
 </head>
 <body>
+  <div data-include="header.html"></div>
 
-  <div class="form-container">
-    <form id="reservaForm">
-      <div class="step active">
-        <h3>Paso 1: Fechas</h3>
-        <label>Fecha de ingreso:<input type="date" name="fecha_ingreso" required></label>
-        <label>Fecha de egreso:<input type="date" name="fecha_egreso" required></label>
-        <button type="button" class="next">Siguiente</button>
-      </div>
+  <main id="main" class="reserva-scope">
+    <nav class="breadcrumb" aria-label="Ruta">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Reserva</li>
+      </ol>
+    </nav>
 
-      <div class="step">
-        <h3>Paso 2: Tus datos</h3>
-      
-        <label>Nombre y apellido:
-          <input type="text" name="nombre_apellido" required>
-        </label>
-      
-        <label>Provincia:
-          <input type="text" name="provincia" required>
-        </label>
-      
-        <p>Para recibir la respuesta por WhatsApp, completá con tu número de teléfono y característica.</p>
-        <div style="display: flex; gap: 1rem;">
-          <label style="flex: 1;">Cod. Área:
-            <input type="text" name="telefono_codigo">
+    <section class="form-container">
+      <h1>Solicitar reserva</h1>
+      <form id="reserva" class="form" action="#" method="POST" novalidate>
+        <fieldset class="step active">
+          <legend>Paso 1: Fechas</legend>
+          <label>Fecha de ingreso
+            <input type="date" name="checkin" required>
           </label>
-          <label style="flex: 2;">Teléfono:
-            <input type="text" name="telefono_numero">
+          <label>Fecha de egreso
+            <input type="date" name="checkout" required>
           </label>
-        </div>
-      
-        <p>O para recibir la respuesta por Mail, completá con tu mail.</p>
-        <label>Email:
-          <input type="email" name="mail">
-        </label>
-      
-        <label>Unidad solicitada:
-          <select name="unidad" required>
-            <option value="" disabled selected>Seleccionar</option>
-            <option value="Cabaña">Cabaña</option>
-            <option value="Bungalow">Bungalow</option>
-            <option value="Camping">Camping</option>
-          </select>
-        </label>
-      
-        <label>Cantidad de huéspedes:
-          <input type="number" name="huespedes" min="1" required>
-        </label>
-      
-        <label>Comentarios adicionales:
-          <textarea name="comentarios"></textarea>
-        </label>
-      
-        <div class="button-group">
-          <button type="button" class="prev">Volver</button>
-          <button type="submit">Enviar</button>
-        </div>
-      </div>
-      
-    </form>
-    <div class="confirmation hidden">
-      <h2>Gracias, tu solicitud fue enviada.</h2>
-      <p>En breves nuestro equipo se estará contactando con usted para continuar con la misma.</p>
-    </div>
-  </div>
+          <button type="button" class="next">Siguiente</button>
+        </fieldset>
 
-  <script src="form-sheet.js"></script>
+        <fieldset class="step">
+          <legend>Paso 2: Tus datos</legend>
+          <label>Nombre y apellido
+            <input type="text" name="nombre" required autocomplete="name">
+          </label>
+          <label>Provincia
+            <input type="text" name="provincia" required>
+          </label>
+          <label>WhatsApp
+            <input type="tel" name="whatsapp" inputmode="tel" autocomplete="tel">
+          </label>
+          <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+            <button type="button" class="prev">Atrás</button>
+            <button type="button" class="next">Siguiente</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend>Paso 3: Alojamiento</legend>
+          <label>Tipo
+            <select name="tipo" required>
+              <option value="">Elegí una opción</option>
+              <option value="cabana">Cabaña</option>
+              <option value="bungalow">Bungalow</option>
+              <option value="acampe">Acampe</option>
+            </select>
+          </label>
+          <label>Preferencias
+            <textarea name="preferencias" rows="3" placeholder="Con quincho, cerca de la piscina, etc."></textarea>
+          </label>
+          <div style="display:flex; gap:.75rem; flex-wrap:wrap;">
+            <button type="button" class="prev">Atrás</button>
+            <button type="submit" class="submit">Solicitar reserva</button>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <a class="btn btn--secondary" id="waLink" href="#" target="_blank" rel="noopener">Continuar por WhatsApp</a>
+        </div>
+
+        <input type="text" name="empresa" class="hidden" tabindex="-1" aria-hidden="true">
+        <div class="form__feedback" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <div data-include="footer.html"></div>
+
+  <script src="includes.js" defer></script>
+  <script>
+    // Steps simples
+    (function(){
+      const form = document.getElementById('reserva');
+      const steps = Array.from(form.querySelectorAll('.step'));
+      let i = steps.findIndex(s => s.classList.contains('active'));
+      if (i < 0) i = 0; steps[i].classList.add('active');
+
+      function show(n){
+        steps.forEach((s, idx) => s.classList.toggle('active', idx === n));
+        i = n; updateWA();
+      }
+
+      form.addEventListener('click', (e) => {
+        if (e.target.classList.contains('next')) {
+          e.preventDefault();
+          // Validación mínima del current step
+          const inputs = steps[i].querySelectorAll('input, select, textarea');
+          for (const inp of inputs) {
+            if (!inp.checkValidity()) { inp.reportValidity(); return; }
+          }
+          show(Math.min(i+1, steps.length-1));
+        }
+        if (e.target.classList.contains('prev')) {
+          e.preventDefault();
+          show(Math.max(i-1, 0));
+        }
+      });
+
+      // WA link
+      const wa = document.getElementById('waLink');
+      function updateWA(){
+        const data = new FormData(form);
+        const msg = `Reserva: ${data.get('tipo')||'-'} | ${data.get('checkin')||'-'} a ${data.get('checkout')||'-'} | ${data.get('nombre')||'-'} (${data.get('whatsapp')||'sin WhatsApp'}) | ${data.get('preferencias')||''}`;
+        wa.href = `https://wa.me/5491160248224?text=${encodeURIComponent(msg)}`;
+      }
+      form.addEventListener('input', updateWA);
+      document.addEventListener('DOMContentLoaded', updateWA);
+
+      // Submit mock
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const feedback = form.querySelector('.form__feedback');
+        feedback.textContent = '¡Listo! Te vamos a responder por WhatsApp o email.';
+      });
+    })();
+  </script>
 </body>
 </html>

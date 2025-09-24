@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cabañas | Complejo Las Sierras</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acampe | Complejo Las Sierras</title>
+  <meta name="description" content="Parcelas amplias con sombra y opción de quincho 4×5 m con luz propia. Duchas calientes, asadores y tomas eléctricos.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Cabañas</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="cabanas.html" class="active">Cabañas</a></li>
-        <li><a href="bungalows.html">Bungalows</a></li>
-        <li><a href="acampe.html">Acampe</a></li>
-        <li><a href="amenities.html">Amenities</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div data-include="header.html"></div>
 
-  <main>
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Ruta">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Acampe</li>
+      </ol>
+    </nav>
+
+    <h1>Acampe</h1>
+
     <section>
-      <h2>Nuestras Cabañas</h2>
-      <p>Equipadas con cocina, calefacción, Wi-Fi y hermosas vistas. Disponibles para 2 a 6 personas.</p>
-      <!-- Podés agregar una galería de imágenes más adelante -->
+      <h2>Parcelas y servicios</h2>
+      <ul>
+        <li>Parcelas grandes: 2 carpas + auto.</li>
+        <li>Quincho 4×5 m con luz propia (opcional).</li>
+        <li>Duchas con agua caliente.</li>
+        <li>Asadores y tomas eléctricos en sectores comunes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Parcela con quincho</h2>
+      <p>El quincho ocupa una tercera parte de la parcela y tiene iluminación propia. Podés montar la carpa debajo o usarlo como comedor, dejando la carpa detrás. Espacio real, sin Tetris.</p>
+    </section>
+
+    <section class="cta">
+      <h2>¿Listo para acampar?</h2>
+      <p><a class="btn btn--primary" href="reserva.html?tipo=acampe">Solicitar reserva</a></p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Complejo Las Sierras</p>
-  </footer>
+  <div data-include="footer.html"></div>
+  <script src="includes.js" defer></script>
 </body>
 </html>
