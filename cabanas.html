@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cabañas | Complejo Las Sierras</title>
-  <meta name="description" content="Cabañas simple y especial. Equipadas con cocina, climatización y ropa blanca.">
+  <meta name="description" content="Cabañas simple y especial en Nono. Cocina, climatización, estacionamiento. Reservá por WhatsApp o mail.">
+  <link rel="icon" href="img/logo-las-sierras.png" type="image/png">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header global -->
+  <!-- Header global (si usás parciales) -->
   <div data-include="header.html"></div>
 
   <main id="main">
@@ -19,30 +20,37 @@
       </ol>
     </nav>
 
-    <h1>Cabañas</h1>
-    <p>Dos categorías para que elijas tranquilo: <strong>Simple</strong>, práctica y cómoda; y <strong>Especial</strong>, con más espacio y detalles.</p>
+    <h1 style="font-family:'Playfair Display', Georgia, serif;">Cabañas</h1>
+    <p class="muted">Dos categorías: <strong>Simple</strong> (2 a 4 huéspedes) y <strong>Especial</strong> (hasta 6). Cocina equipada, A/A, estacionamiento junto a la unidad.</p>
 
     <!-- CABAÑA SIMPLE -->
     <section aria-labelledby="cab-simple">
       <div class="section__header">
         <h2 id="cab-simple">Cabaña Simple</h2>
-        <p class="muted">Para 2 a 4 huéspedes. Cocina equipada, A/A, ropa blanca y estacionamiento junto a la unidad.</p>
+        <p class="muted">Práctica y cómoda para parejas o familias chicas. Incluye frazadas; ropa blanca no incluida.</p>
       </div>
 
       <div class="carousel" data-carousel data-autoplay="6000" aria-roledescription="carrusel" aria-label="Fotos Cabaña Simple" tabindex="0">
         <div class="carousel__viewport">
-          <!-- Reemplazá rutas/archivos por los tuyos reales si cambian -->
           <figure class="carousel__slide">
-            <img src="img/Cabañas/Simple/Exterior 1.jpeg" alt="Cabaña Simple: estar con ventanal al parque" width="1280" height="800" decoding="async">
-            <figcaption class="carousel__caption">Estar luminoso con vista al parque.</figcaption>
+            <img src="img/Cabanas/Simple/exterior4.jpeg" alt="Cabaña Simple: exterior con galería" width="1600" height="1000" decoding="async">
+            <figcaption class="carousel__caption">Exterior con galería y verde alrededor.</figcaption>
           </figure>
           <figure class="carousel__slide">
-            <img src="img/Cabañas/Simple/Matrimonial.jpeg" alt="Dormitorio matrimonial de la Cabaña Simple" width="1280" height="800" loading="lazy" decoding="async">
-            <figcaption class="carousel__caption">Dormitorio matrimonial con ropa blanca.</figcaption>
+            <img src="img/cabanas/simple/matrimonial.jpeg" alt="Dormitorio matrimonial de la Cabaña Simple" width="1600" height="1000" loading="lazy" decoding="async">
+            <figcaption class="carousel__caption">Dormitorio matrimonial confortable.</figcaption>
           </figure>
           <figure class="carousel__slide">
-            <img src="img/Cabañas/Simple/Cuchetas.jpeg" alt="Cuchetas para niños" width="1280" height="800" loading="lazy" decoding="async">
-            <figcaption class="carousel__caption">Cuchetas para los peques.</figcaption>
+            <img src="img/Cabanas/Simple/cuchetas.jpeg" alt="Cuchetas para niños en la Cabaña Simple" width="1600" height="1000" loading="lazy" decoding="async">
+            <figcaption class="carousel__caption">Cuchetas listas para peques.</figcaption>
+          </figure>
+          <figure class="carousel__slide">
+            <img src="img/Cabanas/Simple/bano.jpeg" alt="Baño de la Cabaña Simple" width="1600" height="1000" loading="lazy" decoding="async">
+            <figcaption class="carousel__caption">Baño funcional, limpio y práctico.</figcaption>
+          </figure>
+          <figure class="carousel__slide">
+            <img src="img/cabanas/simple/exterior1.jpeg" alt="Otra vista exterior de la Cabaña Simple" width="1600" height="1000" loading="lazy" decoding="async">
+            <figcaption class="carousel__caption">Otra vista del exterior entre árboles.</figcaption>
           </figure>
         </div>
 
@@ -55,24 +63,28 @@
     </section>
 
     <!-- CABAÑA ESPECIAL -->
-    <section aria-labelledby="cab-especial" class="section">
+    <section aria-labelledby="cab-especial" class="section" style="margin-top:1.5rem;">
       <div class="section__header">
         <h2 id="cab-especial">Cabaña Especial</h2>
-        <p class="muted">Hasta 6 huéspedes. Más metros, dos baños, deck con mesa exterior y asador.</p>
+        <p class="muted">Más metros y capacidad hasta 6. Dos baños, deck con mesa exterior y asador.</p>
       </div>
 
       <div class="carousel" data-carousel data-autoplay="6000" aria-roledescription="carrusel" aria-label="Fotos Cabaña Especial" tabindex="0">
         <div class="carousel__viewport">
           <figure class="carousel__slide">
-            <img src="img/Cabañas/Especial/Exterior 8.jpeg" alt="Cabaña Especial: living amplio con hogar" width="1280" height="800" decoding="async">
-            <figcaption class="carousel__caption">Living amplio para descansar en serio.</figcaption>
+            <img src="img/Cabanas/Especial/exterior8.jpeg" alt="Cabaña Especial: exterior amplio" width="1600" height="1000" decoding="async">
+            <figcaption class="carousel__caption">Exterior amplio, rodeado de naturaleza.</figcaption>
           </figure>
           <figure class="carousel__slide">
-            <img src="img/Cabañas/Especial/dormitorio-doble.jpg.jpeg" alt="Dormitorio doble en la Cabaña Especial" width="1280" height="800" loading="lazy" decoding="async">
+            <img src="img/Cabanas/Especial/cocina1.jpeg" alt="Cocina equipada de la Cabaña Especial" width="1600" height="1000" loading="lazy" decoding="async">
+            <figcaption class="carousel__caption">Cocina equipada para estadías largas.</figcaption>
+          </figure>
+          <figure class="carousel__slide">
+            <img src="img/Cabanas/Especial/dormitorio-doble.jpeg" alt="Dormitorio doble de la Cabaña Especial" width="1600" height="1000" loading="lazy" decoding="async">
             <figcaption class="carousel__caption">Dormitorio doble cómodo.</figcaption>
           </figure>
           <figure class="carousel__slide">
-            <img src="img/Cabañas/Especial/Camas.jpeg" alt="Camas adicionales" width="1280" height="800" loading="lazy" decoding="async">
+            <img src="img/Cabanas/Especial/camas.jpeg" alt="Camas adicionales en la Cabaña Especial" width="1600" height="1000" loading="lazy" decoding="async">
             <figcaption class="carousel__caption">Camas extra para grupos.</figcaption>
           </figure>
         </div>
@@ -86,19 +98,34 @@
     </section>
 
     <!-- FAQ -->
-    <section>
+    <section style="margin-top:1.5rem;">
       <h2>Preguntas frecuentes</h2>
       <details>
         <summary>¿Incluye ropa de cama?</summary>
-        <div>No, solo almohadas y frazadas.</div>
-      </details>
-      <details>
-        <summary>¿Hay estacionamiento al lado?</summary>
-        <div>Cada unidad tiene su propia cochera.</div>
+        <div>No. Incluimos frazadas; la ropa blanca no está incluida.</div>
       </details>
       <details>
         <summary>¿Aceptan mascotas?</summary>
-        <div>Con correa y cuidados básicos.</div>
+        <div>Sí, con correa y cuidados básicos. Consultar por tamaños y razas.</div>
+      </details>
+      <details>
+        <summary>¿Check-in y check-out?</summary>
+        <div>Check-in desde las <strong>14:00</strong>. Check-out hasta las <strong>10:00</strong>.</div>
+      </details>
+      <details>
+        <summary>¿Estacionamiento?</summary>
+        <div>Cada unidad tiene espacio asignado junto a la cabaña.</div>
+      </details>
+      <details>
+        <summary>¿Ubicación?</summary>
+        <div><a href="https://www.google.com.ar/maps/place/Complejo+Las+Sierras/" target="_blank" rel="noopener">Ver en Google Maps</a></div>
+      </details>
+      <details>
+        <summary>¿Contacto?</summary>
+        <div>
+          WhatsApp: <a href="https://wa.me/5491160248224?text=Hola%2C+quiero+consultar+sobre+las+caba%C3%B1as" target="_blank" rel="noopener">+54 9 11 6024-8224</a><br>
+          Email: <a href="mailto:lassierrascamping@gmail.com">lassierrascamping@gmail.com</a>
+        </div>
       </details>
     </section>
 
@@ -112,9 +139,9 @@
   <div data-include="footer.html"></div>
 
   <!-- WhatsApp flotante -->
-  <a class="whatsapp" href="https://wa.me/5491160248224?text=Hola%20quiero%20consultar%20sobre%20las%20caba%C3%B1as%20%F0%9F%8F%A0"
+  <a class="whatsapp" href="https://wa.me/5491160248224?text=Hola%20%F0%9F%91%8B%20vengo%20desde%20la%20p%C3%A1gina%20y%20quiero%20consultar%20por%20las%20caba%C3%B1as"
      target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
-    <img src="https://icongr.am/feather/message-circle.svg?size=28&color=ffffff" alt="" width="32" height="32">
+    <img src="https://icongr.am/fontawesome/whatsapp.svg?size=32&color=ffffff" alt="" width="32" height="32">
   </a>
 
   <script src="includes.js" defer></script>
